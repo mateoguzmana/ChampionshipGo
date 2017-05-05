@@ -13,7 +13,7 @@ $(function () {
         password =  $('#Password').val();
         
         var data = {"email":email, 
-                    "password":password, 
+                    "password":password,
 
                     };
 
