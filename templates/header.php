@@ -2,7 +2,7 @@
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
         <header class="logo hidden-sm-down">
-            <a href="index.html">sing</a>
+            <a href="index.html">ChampionshipGO!</a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
@@ -28,7 +28,8 @@
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fa fa-desktop"></i>
+                      <i class="fa fa-trophy"></i>
+
                     </span>
                     Torneos
                     <i class="toggle fa fa-angle-down"></i>
@@ -36,6 +37,21 @@
                 <ul id="sidebar-dashboard" class="collapse in">
                     <li class="active"><a href="index.php">Mis torneos</a></li>
                     <li><a href="widgets.php">Buscar torneos</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a href="#sidebar-equip" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                      <i class="fa fa-futbol-o"></i>
+                    </span>
+                     Equipos
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-equip" class="collapse in">
+                    <li><a href="#">Mis equipos</a></li>
+                    <li><a href="widgets.php">Buscar equipos</a></li>
                 </ul>
             </li>
             <li>

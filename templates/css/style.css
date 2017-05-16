@@ -1,0 +1,13 @@
+
+.Championship {
+ 
+   cursor: pointer;
+
+}
+
+.Championship:hover {
+ 
+   background-color:  rgb(92, 184, 92);
+   color: white;
+
+}
