@@ -35,15 +35,15 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
       <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-           <li>Crear nuevo torneo</li>
+           <li class="btn btn-info Create">Crear nuevo torneo</li>
         </ol>
-        <h1 class="page-title">Tabla de los torneos creados</h1>
+        <h1 class="page-title TitleDelete">Tabla de los torneos creados</h1>
     
   
 
         <div class="row">
             <div class="col-lg-12">
-                <section class="widget">
+                <section class="widget Showform">
                     <header>
                         <h5 class="fw-semi-bold">Mis torneos</h5>
                          
@@ -230,6 +230,8 @@
                 </section>
             </div>
         </div>
+
+
 
     
 </div>

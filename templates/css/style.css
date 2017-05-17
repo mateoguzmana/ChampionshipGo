@@ -11,3 +11,19 @@
    color: white;
 
 }
+
+
+.Team {
+ 
+   cursor: pointer;
+
+}
+
+.Team:hover {
+ 
+   background:  rgb(92, 184, 92);
+   color: white;
+
+}
+
+
