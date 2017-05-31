@@ -1,22 +1,17 @@
 <?php
+
 require_once "connection.class.php";
-    
-     $con;
+  
+
 
      class persons{
 
-       public function __construct(){
-         
-        $connection = new connection();  
-        $con = $connection;    
-  
-       }
-
         public function login($email, $password){
-        
-            $query = $this->$con->prepare("
-            	SELECT id_person
-                FROM persons
+            
+         $connection = new connection();  
+         $con = $connection->getConnection();    
+             $query = $con->prepare("
+            	SELECT *FROM persons
                 WHERE email=:email AND password = :password
             ");
 
@@ -25,16 +20,23 @@ require_once "connection.class.php";
 
 	        $query->execute();
 
+            return $query;
+
+    
         }
+
 
         public function RegisterPersons($nit, $id_typedocument, $name, $lastname, $photo, 
             $state, $role, $password, $email){
-          
-            $sql = "INSERT INTO persons (nit, id_typedocument, name,lastname,photo, state, id_role, password, email)
+
+            $connection = new connection();  
+            $con = $connection->getConnection(); 
+            $sql = "INSERT INTO persons (nit, id_typedocument, 
+            name,lastname,photo, state, id_role, password, email)
                VALUES (:nit, :id_typedocument, :name, :lastname, :photo, :state, 
                :role, :password, :email)";
 
-            $query = $this->$con->prepare($sql);
+            $query = $con->prepare($sql);
             
             $query->bindParam(":nit",$nit);
             $query->bindParam(":id_typedocument",$id_typedocument);
@@ -48,27 +50,39 @@ require_once "connection.class.php";
             
             $query->execute();
 
-            return $query;
-               
+            if($query){
+ 
+               echo "Registró correctamente";
+
+            }
+            else {
+
+                echo "Ocurrió un error";
+            }
+
+       
         }
 
-        public function UpdatePersons($id_person,$nit, $id_typedocument, $name, $lastname, $photo, 
+    
+       public function UpdatePersons($id_person,$nit, $id_typedocument, $name, $lastname, $photo, 
             $state, $role, $password, $email){
-          
+
+            $connection = new connection();  
+            $con = $connection->getConnection(); 
             $sql = "UPDATE persons SET 
-                (nit=:nit, 
+                nit=:nit, 
                  id_typedocument=:id_typedocument,
-                 name =:name , 
+                 name =:name, 
                  lastname=:lastname,
                  photo =:photo, 
                  state =:state, 
                  id_role = :role, 
                  password =:password,
-                 email=::email WHERE id_person = :id_person 
-                 )";
+                 email=:email WHERE id_person = :id_person 
+                 ";
 
-            $query = $this->$con->prepare($sql);
-            $query->bindParam(":id_person",$id_person);
+            $query = $con->prepare($sql);
+            $query->bindParam(":id_person",$id_person); 
             $query->bindParam(":nit",$nit);
             $query->bindParam(":id_typedocument",$id_typedocument);
             $query->bindParam(":name",$name);
@@ -77,32 +91,49 @@ require_once "connection.class.php";
             $query->bindParam(":state",$state);
             $query->bindParam(":role",$role);
             $query->bindParam(":password",$password);
-            $query->bindParam(":email",$email);   
+            $query->bindParam(":email",$email);
+             
             
             $query->execute();
 
-            return $query;
+            if($query){
+
+                echo "Actualizó correctamente";
+            }
+            else {
+
+                echo "No funcionó :c";
+            }
 
         } 
 
         public function DeletePersons($id_person){
-        
-            $sql = "UPDATE persons SET state=:state WHERE id_person=:id_person";
+           
+            $connection = new connection();  
+            $con = $connection->getConnection(); 
+            $sql = "UPDATE persons SET state=0 WHERE id_person=:id_person";
             
-            $query = $this->$con->prepare($sql);
-            $query->bindParam(":state", 0);
+            $query = $con->prepare($sql);
             $query->bindParam("id_person", $id_person);
 
             $query->execute();
+            
+             if($query){
 
-            return $query;
+                echo "Eliminó correctamente";
+            }
+            else {
 
-        }
+                echo "No funcionó :c";
+            }
+
+            
+        }  
  
 
+  }
 
 
 
-    }
 
 ?>

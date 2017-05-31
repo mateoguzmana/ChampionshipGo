@@ -2,11 +2,11 @@
 
     class connection {
 
-    	public $connection;
+        
 
-        public function __construct(){
+        public function getConnection(){
 
-           $this->connection = new PDO("mysql:host=localhost;dbname=championshipgo;charset=utf8","root","");
+         $connection = new PDO("mysql:host=localhost;dbname=championshipgo;charset=utf8","root","");
 
           /* if($this->connection){
 
@@ -17,7 +17,7 @@
                 echo "No se estableció la conexión";
            }  */
 
-           return $this->connection;
+           return $connection;
             
         }
 

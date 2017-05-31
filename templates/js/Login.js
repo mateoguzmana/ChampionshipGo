@@ -5,35 +5,58 @@ $(function () {
      */
     function Login(){
       
-      $('#Login').click(function(){
-
-        
+       $('#Login').click(function(){
 
         email    =  $('#Email').val();
         password =  $('#Password').val();
-        
-        var data = {"email":email, 
-                    "password":password,
+          
+        var data = {
+        "email":email, 
+        "password":password,
+        "method": 5
+        };
 
-                    };
-
-          $.post('../api/controllers/persons.controller.php', data, function(validar){
-
-            alert(validar);
-
-          }); 
+        $.post('../api/controllers/persons.controller.php', data, function(validar){
 
 
+           if(validar == "true"){
+                    
+             window.location.href= "index.php";
+
+           }
+           else {
+
+            $('#logfalse').addClass('alert alert-danger');
+            $('#logtext').html("Contraseña o correo incorrecto");
+
+           }
 
 
-        });
 
-    }
+                
+         }); 
+
+
+
+ 
+       });
+
+          $('#Register').click(function(){
+
+
+               $('.titulo').html("Completa el formulario para el registro");
+
+          });
+
+
+
+     }
 
 
     function pageLoad() {
 
-        Login();
+      Login();
+      
     }
 
    

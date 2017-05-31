@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-05-2017 a las 04:31:46
+-- Tiempo de generación: 31-05-2017 a las 22:39:35
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 7.0.9
 
@@ -100,6 +100,14 @@ CREATE TABLE `persons` (
   `state` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `persons`
+--
+
+INSERT INTO `persons` (`id_person`, `nit`, `id_typedocument`, `name`, `lastname`, `photo`, `id_role`, `password`, `email`, `state`) VALUES
+(1, '1026157932', 2, 'Jhon', 'Vente', 'jhon.jpg', 1, '123', 'jvente18@gmail.com', 1),
+(2, '458484', 1, 'Mateo', 'Guzman', 'teo.jpg', 1, '123', 'mateus19@gmail.com', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -111,6 +119,14 @@ CREATE TABLE `roles` (
   `description` varchar(50) NOT NULL,
   `state` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id_role`, `description`, `state`) VALUES
+(1, 'person', 1),
+(2, 'technical', 1);
 
 -- --------------------------------------------------------
 
@@ -136,6 +152,14 @@ CREATE TABLE `typedocuments` (
   `description` varchar(50) NOT NULL,
   `state` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `typedocuments`
+--
+
+INSERT INTO `typedocuments` (`id_typedocument`, `description`, `state`) VALUES
+(1, 'Tarjeta de identidad', 1),
+(2, 'Cedula de ciudadania', 1);
 
 --
 -- Índices para tablas volcadas
@@ -224,12 +248,12 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT de la tabla `persons`
 --
 ALTER TABLE `persons`
-  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_person` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `teams`
 --
@@ -239,7 +263,7 @@ ALTER TABLE `teams`
 -- AUTO_INCREMENT de la tabla `typedocuments`
 --
 ALTER TABLE `typedocuments`
-  MODIFY `id_typedocument` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_typedocument` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Restricciones para tablas volcadas
 --

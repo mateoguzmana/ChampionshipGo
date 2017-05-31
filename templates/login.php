@@ -26,7 +26,7 @@
     <main id="content" class="widget-login-container" role="main">
         <div class="row">
             <div class="col-xl-4 col-md-6 col-xs-10 col-xl-offset-4 col-md-offset-3 col-xs-offset-1">
-                <h5 class="widget-login-logo animated fadeInUp">
+                <h5 class="widget-login-logo animated fadeInUp titulo">
                     <i class="fa fa-circle text-gray"></i>
                     Entrar a la aplicación
                     <i class="fa fa-circle text-warning"></i>
@@ -34,7 +34,7 @@
                 <section class="widget widget-login animated fadeInUp">
                     <header>
                          <center>
-                             <img src="img/champions.png" height="150px">
+                             <img src="img/champions.png" height="100px">
                         </center>
                     </header>
                     <div class="widget-body">
@@ -47,20 +47,26 @@
                                 <input class="form-control" id="Password" type="password" placeholder="Contraseña">
                             </div>
                             <div class="clearfix">
-                                <div class="btn-toolbar pull-xs-right">
+                                <div class="btn-toolbar pull-xs">
+                                     <center>
                                     <a class="btn btn-primary btn-sm" id="Login">Acceder</a>
-                                    <button type="button" class="btn btn-secondary btn-sm">Regitrarse</button>
+                                    &nbsp;&nbsp;<a class="btn btn-secondary btn-sm" href="resgister_person.php">Regitrarse</a>
+                                    </center>
                                 </div>
                             </div>
                             
                         </form>
                     </div>
+                      <div class="container">
+
+                          <p class="" style="text-align: center;" id="logfalse"><strong id="logtext"></strong></p>
+                      </div>
                 </section>
             </div>
         </div>
     </main>
     <footer class="page-footer">
-        2014 &copy; Sing. Admin Dashboard Template.
+        2017 &copy; Remic inc.
     </footer>
 </div>
 <!-- The Loader. Is shown when pjax happens -->
