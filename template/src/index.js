@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Dress from './components/Dress';
+import ChampionshipGo from './components/ChampionshipGo';
 
 window.onload = () => {
   ReactDOM.render(
-    <div>
-        <Dress/>
-    </div>,
+    <ChampionshipGo />,
     document.querySelector('#container')
   );
 };

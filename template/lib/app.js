@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/Users/mateoguzmana/Documents/dress/example";
+/******/ 	__webpack_require__.p = "/Users/mateoguzmana/Documents/ChampionshipGo/template/example";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -54,18 +54,14 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _Dress = __webpack_require__(170);
+	var _ChampionshipGo = __webpack_require__(172);
 	
-	var _Dress2 = _interopRequireDefault(_Dress);
+	var _ChampionshipGo2 = _interopRequireDefault(_ChampionshipGo);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	window.onload = function () {
-	  _reactDom2.default.render(_react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(_Dress2.default, null)
-	  ), document.querySelector('#container'));
+	  _reactDom2.default.render(_react2.default.createElement(_ChampionshipGo2.default, null), document.querySelector('#container'));
 	};
 
 /***/ },
@@ -21070,7 +21066,9 @@
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 170 */
+/* 170 */,
+/* 171 */,
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21085,11 +21083,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Header = __webpack_require__(171);
+	var _Header = __webpack_require__(173);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _Body = __webpack_require__(172);
+	var _Body = __webpack_require__(174);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
@@ -21101,16 +21099,16 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Dress = function (_Component) {
-	    _inherits(Dress, _Component);
+	var ChampionshipGo = function (_Component) {
+	    _inherits(ChampionshipGo, _Component);
 	
-	    function Dress() {
-	        _classCallCheck(this, Dress);
+	    function ChampionshipGo() {
+	        _classCallCheck(this, ChampionshipGo);
 	
-	        return _possibleConstructorReturn(this, (Dress.__proto__ || Object.getPrototypeOf(Dress)).apply(this, arguments));
+	        return _possibleConstructorReturn(this, (ChampionshipGo.__proto__ || Object.getPrototypeOf(ChampionshipGo)).apply(this, arguments));
 	    }
 	
-	    _createClass(Dress, [{
+	    _createClass(ChampionshipGo, [{
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -21122,13 +21120,13 @@
 	        }
 	    }]);
 	
-	    return Dress;
+	    return ChampionshipGo;
 	}(_react.Component);
 	
-	exports.default = Dress;
+	exports.default = ChampionshipGo;
 
 /***/ },
-/* 171 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21261,10 +21259,10 @@
 	exports.default = Header;
 
 /***/ },
-/* 172 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -21275,14 +21273,6 @@
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
-	
-	var _Avatar = __webpack_require__(173);
-	
-	var _Avatar2 = _interopRequireDefault(_Avatar);
-	
-	var _Clothes = __webpack_require__(174);
-	
-	var _Clothes2 = _interopRequireDefault(_Clothes);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21298,35 +21288,16 @@
 	    function Body(props) {
 	        _classCallCheck(this, Body);
 	
-	        var _this = _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this, props));
-	
-	        _this.state = {
-	            gender: "M"
-	        };
-	        return _this;
+	        return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this, props));
 	    }
 	
 	    _createClass(Body, [{
-	        key: 'render',
+	        key: "render",
 	        value: function render() {
-	            var _this2 = this;
-	
 	            return _react2.default.createElement(
-	                'div',
-	                { className: 'container' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'row' },
-	                    _react2.default.createElement(_Avatar2.default, {
-	                        gender: this.state.gender,
-	                        onChangeGender: function onChangeGender(gender) {
-	                            _this2.setState({ gender: gender });
-	                        }
-	                    }),
-	                    _react2.default.createElement(_Clothes2.default, {
-	                        gender: this.state.gender
-	                    })
-	                )
+	                "div",
+	                { className: "container" },
+	                _react2.default.createElement("div", { className: "row" })
 	            );
 	        }
 	    }]);
@@ -21335,189 +21306,6 @@
 	}(_react.Component);
 	
 	exports.default = Body;
-
-/***/ },
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Avatar = function (_Component) {
-	    _inherits(Avatar, _Component);
-	
-	    function Avatar(props) {
-	        _classCallCheck(this, Avatar);
-	
-	        var _this = _possibleConstructorReturn(this, (Avatar.__proto__ || Object.getPrototypeOf(Avatar)).call(this, props));
-	
-	        _this.state = {
-	            gender: _this.props.gender
-	        };
-	        _this.images = {
-	            avatarMale: "https://avatar-ssl.xboxlive.com/avatar/davidvkimball/avatar-body.png",
-	            avatarFemale: "http://avatar.xboxlive.com/avatar/An%20Actual%20Girl/avatar-body.png",
-	            iconMale: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Male_Icon.svg/2000px-Male_Icon.svg.png",
-	            iconFemale: "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Female_Icon.svg/220px-Female_Icon.svg.png"
-	        };
-	
-	        _this.changeGender = _this.changeGender.bind(_this);
-	        return _this;
-	    }
-	
-	    _createClass(Avatar, [{
-	        key: "changeGender",
-	        value: function changeGender(gender) {
-	            gender == "M" ? this.setState({ gender: "F" }) : this.setState({ gender: "M" });
-	            this.props.onChangeGender(this.state.gender);
-	        }
-	    }, {
-	        key: "render",
-	        value: function render() {
-	            var _this2 = this;
-	
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "col-sm-6" },
-	                _react2.default.createElement(
-	                    "h3",
-	                    null,
-	                    "Avatars"
-	                ),
-	                _react2.default.createElement("img", { src: this.state.gender == "M" ? this.images.avatarMale : this.images.avatarFemale }),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "row" },
-	                    _react2.default.createElement(
-	                        "div",
-	                        { className: "col-sm-12" },
-	                        _react2.default.createElement("img", { className: "iconImg", src: this.images.iconFemale, onClick: function onClick() {
-	                                return _this2.changeGender("M");
-	                            } }),
-	                        _react2.default.createElement("img", { className: "iconImg", src: this.images.iconMale, onClick: function onClick() {
-	                                return _this2.changeGender("F");
-	                            } })
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Avatar;
-	}(_react.Component);
-	
-	exports.default = Avatar;
-
-/***/ },
-/* 174 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _Translations = __webpack_require__(175);
-	
-	var _Translations2 = _interopRequireDefault(_Translations);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Header = function (_Component) {
-	    _inherits(Header, _Component);
-	
-	    function Header(props) {
-	        _classCallCheck(this, Header);
-	
-	        var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
-	
-	        _this.state = {
-	            gender: _this.props.gender
-	        };
-	        return _this;
-	    }
-	
-	    _createClass(Header, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'col-sm-6' },
-	                _react2.default.createElement(
-	                    'h3',
-	                    null,
-	                    _Translations2.default.clothesView.title["en"]
-	                ),
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    _Translations2.default.clothesView.description["en"].replace("${gender}", this.state.gender == "M" ? "Male" : "Female")
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Header;
-	}(_react.Component);
-	
-	exports.default = Header;
-
-/***/ },
-/* 175 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var Translations = void 0;
-	exports.default = Translations = {
-	    clothesView: {
-	        title: {
-	            en: "Clothes",
-	            sp: "Ropa",
-	            pt: "Roupas",
-	            fr: "Vêtements"
-	        },
-	        description: {
-	            en: "Clothes for ${gender}.",
-	            sp: "Ropa para ${gender}.",
-	            pt: "Roupas pra ${gender}.",
-	            fr: "Vêtements pour ${gender}."
-	        }
-	    }
-	};
 
 /***/ }
 /******/ ]);
