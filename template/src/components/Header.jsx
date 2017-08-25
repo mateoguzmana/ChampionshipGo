@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import Translations from '../data/Translations';
+import GlobalData from '../data/GlobalData';
+import SwitchLanguage from './SwitchLanguage';
 
 export default class Header extends Component {
+
+  constructor(){
+    super();
+  }
+
   render() {
     return (
       <nav className="navbar navbar-inverse">
@@ -13,16 +21,7 @@ export default class Header extends Component {
           </ul>
           <button className="btn btn-danger navbar-btn">Match!</button>
           <ul className="nav navbar-nav navbar-right">
-            <li className="dropdown">
-              <a className="dropdown-toggle" data-toggle="dropdown" href="#">English (EN)
-              <span className="caret"></span></a>
-              <ul className="dropdown-menu">
-                <li><a href="#">English</a></li>
-                <li><a href="#">Spanish</a></li>
-                <li><a href="#">Portuguese</a></li>
-                <li><a href="#">French</a></li>
-              </ul>
-            </li>
+            <SwitchLanguage />
           </ul>
         </div>
       </nav>

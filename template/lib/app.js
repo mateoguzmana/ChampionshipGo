@@ -21127,7 +21127,7 @@
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21138,6 +21138,18 @@
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _Translations = __webpack_require__(175);
+	
+	var _Translations2 = _interopRequireDefault(_Translations);
+	
+	var _GlobalData = __webpack_require__(174);
+	
+	var _GlobalData2 = _interopRequireDefault(_GlobalData);
+	
+	var _SwitchLanguage = __webpack_require__(176);
+	
+	var _SwitchLanguage2 = _interopRequireDefault(_SwitchLanguage);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21153,98 +21165,49 @@
 	  function Header() {
 	    _classCallCheck(this, Header);
 	
-	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 	  }
 	
 	  _createClass(Header, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "nav",
-	        { className: "navbar navbar-inverse" },
+	        'nav',
+	        { className: 'navbar navbar-inverse' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "container-fluid" },
+	          'div',
+	          { className: 'container-fluid' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "navbar-header" },
+	            'div',
+	            { className: 'navbar-header' },
 	            _react2.default.createElement(
-	              "a",
-	              { className: "navbar-brand", href: "#" },
-	              "ChampionshipGo"
+	              'a',
+	              { className: 'navbar-brand', href: '#' },
+	              'ChampionshipGo'
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "ul",
-	            { className: "nav navbar-nav" },
+	            'ul',
+	            { className: 'nav navbar-nav' },
 	            _react2.default.createElement(
-	              "li",
-	              { className: "active" },
+	              'li',
+	              { className: 'active' },
 	              _react2.default.createElement(
-	                "a",
-	                { href: "#" },
-	                "Mundial Map"
+	                'a',
+	                { href: '#' },
+	                'Mundial Map'
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "button",
-	            { className: "btn btn-danger navbar-btn" },
-	            "Match!"
+	            'button',
+	            { className: 'btn btn-danger navbar-btn' },
+	            'Match!'
 	          ),
 	          _react2.default.createElement(
-	            "ul",
-	            { className: "nav navbar-nav navbar-right" },
-	            _react2.default.createElement(
-	              "li",
-	              { className: "dropdown" },
-	              _react2.default.createElement(
-	                "a",
-	                { className: "dropdown-toggle", "data-toggle": "dropdown", href: "#" },
-	                "English (EN)",
-	                _react2.default.createElement("span", { className: "caret" })
-	              ),
-	              _react2.default.createElement(
-	                "ul",
-	                { className: "dropdown-menu" },
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#" },
-	                    "English"
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#" },
-	                    "Spanish"
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#" },
-	                    "Portuguese"
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  "li",
-	                  null,
-	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#" },
-	                    "French"
-	                  )
-	                )
-	              )
-	            )
+	            'ul',
+	            { className: 'nav navbar-nav navbar-right' },
+	            _react2.default.createElement(_SwitchLanguage2.default, null)
 	          )
 	        )
 	      );
@@ -21361,6 +21324,233 @@
 	}(_react.Component);
 	
 	exports.default = Map;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var GlobalData = void 0;
+	exports.default = GlobalData = {
+	    languages: {
+	        en: {
+	            title: "${name}",
+	            icon: "http://flaglane.com/download/american-flag/american-flag-graphic.png"
+	        },
+	        sp: {
+	            title: "${name}",
+	            icon: "http://static.donquijote.org/images/culture/spanish_flag2.jpg"
+	        },
+	        pt: {
+	            title: "${name}",
+	            icon: "http://www.sciencekids.co.nz/images/pictures/flags680/Brazil.jpg"
+	        },
+	        fr: {
+	            title: "${name}",
+	            icon: "http://www.worldatlas.com/webimage/flags/countrys/zzzflags/frlarge.gif"
+	        }
+	    }
+	};
+
+/***/ },
+/* 175 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var Translations = void 0;
+	exports.default = Translations = {
+	    headerView: {
+	        languages: {
+	            en: {
+	                en: "English",
+	                sp: "Inglés",
+	                pt: "Inglês",
+	                fr: "Anglais"
+	            },
+	            sp: {
+	                en: "Spanish",
+	                sp: "Español",
+	                pt: "Espanhol",
+	                fr: "Spanol"
+	            },
+	            pt: {
+	                en: "Portuguese",
+	                sp: "Portugués",
+	                pt: "Português",
+	                fr: "Portugais"
+	            },
+	            fr: {
+	                en: "French",
+	                sp: "Francés",
+	                pt: "Francês",
+	                fr: "Français"
+	            }
+	        }
+	    },
+	    clothesView: {
+	        title: {
+	            en: "Clothes",
+	            sp: "Ropa",
+	            pt: "Roupas",
+	            fr: "Vêtements"
+	        },
+	        description: {
+	            en: "Clothes for ${gender}.",
+	            sp: "Ropa para ${gender}.",
+	            pt: "Roupas pra ${gender}.",
+	            fr: "Vêtements pour ${gender}."
+	        }
+	    }
+	};
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Translations = __webpack_require__(175);
+	
+	var _Translations2 = _interopRequireDefault(_Translations);
+	
+	var _GlobalData = __webpack_require__(174);
+	
+	var _GlobalData2 = _interopRequireDefault(_GlobalData);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SwitchLanguage = function (_Component) {
+	    _inherits(SwitchLanguage, _Component);
+	
+	    function SwitchLanguage() {
+	        _classCallCheck(this, SwitchLanguage);
+	
+	        var _this = _possibleConstructorReturn(this, (SwitchLanguage.__proto__ || Object.getPrototypeOf(SwitchLanguage)).call(this));
+	
+	        _this.state = {
+	            languageAuto: null,
+	            listLanguages: null
+	        };
+	        _this.changeLanguage.bind(_this);
+	        _this.createLanguages.bind(_this);
+	        _this.createActualLanguage.bind(_this);
+	        return _this;
+	    }
+	
+	    _createClass(SwitchLanguage, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            var _this2 = this;
+	
+	            this.setState({
+	                languageAuto: localStorage.getItem("language") && localStorage.getItem("language") !== undefined ? localStorage.getItem("language") : "en"
+	            });
+	
+	            setTimeout(function () {
+	                _this2.setState({
+	                    listLanguages: _this2.createLanguages(),
+	                    actualLanguage: _this2.createActualLanguage()
+	                });
+	            }, 200);
+	        }
+	    }, {
+	        key: 'changeLanguage',
+	        value: function changeLanguage(language) {
+	            var _this3 = this;
+	
+	            this.setState({ languageAuto: language });
+	            setTimeout(function () {
+	                _this3.setState({
+	                    listLanguages: _this3.createLanguages(),
+	                    actualLanguage: _this3.createActualLanguage()
+	                });
+	            }, 200);
+	            localStorage.setItem("language", language);
+	        }
+	    }, {
+	        key: 'createActualLanguage',
+	        value: function createActualLanguage() {
+	            var data = _GlobalData2.default.languages[this.state.languageAuto];
+	            var leng = _Translations2.default.headerView.languages[this.state.languageAuto][this.state.languageAuto];
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                data.title.replace("${name}", leng),
+	                '\xA0',
+	                _react2.default.createElement('img', { src: data.icon, className: 'languageIcon' })
+	            );
+	        }
+	    }, {
+	        key: 'createLanguages',
+	        value: function createLanguages() {
+	            var _this4 = this;
+	
+	            return Object.keys(_GlobalData2.default.languages).map(function (language, index) {
+	                var data = _GlobalData2.default.languages[language];
+	                var leng = _Translations2.default.headerView.languages[language][_this4.state.languageAuto];
+	                return _react2.default.createElement(
+	                    'li',
+	                    { key: index, onClick: function onClick() {
+	                            return _this4.changeLanguage(language);
+	                        } },
+	                    _react2.default.createElement(
+	                        'a',
+	                        null,
+	                        data.title.replace("${name}", leng),
+	                        '\xA0',
+	                        _react2.default.createElement('img', { src: data.icon, className: 'languageIcon' })
+	                    )
+	                );
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'li',
+	                { className: 'dropdown' },
+	                _react2.default.createElement(
+	                    'a',
+	                    { className: 'dropdown-toggle', 'data-toggle': 'dropdown', href: '#' },
+	                    this.state.actualLanguage
+	                ),
+	                _react2.default.createElement(
+	                    'ul',
+	                    { className: 'dropdown-menu' },
+	                    this.state.listLanguages
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return SwitchLanguage;
+	}(_react.Component);
+	
+	exports.default = SwitchLanguage;
 
 /***/ }
 /******/ ]);
