@@ -21262,11 +21262,7 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'container' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'row' },
-	                    _react2.default.createElement(_Map2.default, null)
-	                )
+	                _react2.default.createElement(_Map2.default, null)
 	            );
 	        }
 	    }]);
@@ -21280,7 +21276,7 @@
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21303,20 +21299,35 @@
 	var Map = function (_Component) {
 	  _inherits(Map, _Component);
 	
-	  function Map() {
+	  function Map(props) {
 	    _classCallCheck(this, Map);
 	
-	    return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, props));
 	  }
 	
 	  _createClass(Map, [{
-	    key: 'render',
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
+	      this.map = new google.maps.Map(this.refs.map, {
+	        zoom: 5,
+	        center: { lat: -25.363, lng: 131.044 }
+	      });
+	    }
+	  }, {
+	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'jaja'
-	      );
+	      return _react2.default.createElement("div", {
+	        id: "map",
+	        ref: "map",
+	        className: "map",
+	        style: {
+	          width: window.innerWidth + "px",
+	          height: window.innerHeight + "px",
+	          marginTop: "-25px",
+	          marginLeft: "-390px",
+	          position: "relative",
+	          overflow: "visible"
+	        } });
 	    }
 	  }]);
 	
