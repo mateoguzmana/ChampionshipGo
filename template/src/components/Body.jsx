@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Map from './Map';
 
 export default class Body extends Component {
 
@@ -10,7 +11,7 @@ export default class Body extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    
+                    <Map />
                 </div>
             </div>
         );

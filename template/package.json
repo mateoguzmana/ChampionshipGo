@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "React webpack starter template",
   "main": "lib/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.10"
+  },
   "author": {
     "name": "Krasimir Tsonev",
     "email": "info@krasimirtsonev.com",

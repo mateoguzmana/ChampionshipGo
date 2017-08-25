@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/Users/mateoguzmana/Documents/ChampionshipGo/template/example";
+/******/ 	__webpack_require__.p = "/Users/mateoguzmana/Documents/ChampionshipGo/template/public";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -54,7 +54,7 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _ChampionshipGo = __webpack_require__(172);
+	var _ChampionshipGo = __webpack_require__(170);
 	
 	var _ChampionshipGo2 = _interopRequireDefault(_ChampionshipGo);
 	
@@ -21066,9 +21066,7 @@
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 170 */,
-/* 171 */,
-/* 172 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21083,11 +21081,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Header = __webpack_require__(173);
+	var _Header = __webpack_require__(171);
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _Body = __webpack_require__(174);
+	var _Body = __webpack_require__(172);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
@@ -21126,7 +21124,7 @@
 	exports.default = ChampionshipGo;
 
 /***/ },
-/* 173 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21173,7 +21171,7 @@
 	            _react2.default.createElement(
 	              "a",
 	              { className: "navbar-brand", href: "#" },
-	              "Dress App"
+	              "ChampionshipGo"
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -21185,21 +21183,21 @@
 	              _react2.default.createElement(
 	                "a",
 	                { href: "#" },
-	                "Create"
+	                "Mundial Map"
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            "button",
 	            { className: "btn btn-danger navbar-btn" },
-	            "Print your avatar!"
+	            "Match!"
 	          ),
 	          _react2.default.createElement(
 	            "ul",
 	            { className: "nav navbar-nav navbar-right" },
 	            _react2.default.createElement(
 	              "li",
-	              { "class": "dropdown" },
+	              { className: "dropdown" },
 	              _react2.default.createElement(
 	                "a",
 	                { className: "dropdown-toggle", "data-toggle": "dropdown", href: "#" },
@@ -21259,10 +21257,10 @@
 	exports.default = Header;
 
 /***/ },
-/* 174 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -21273,6 +21271,10 @@
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _Map = __webpack_require__(173);
+	
+	var _Map2 = _interopRequireDefault(_Map);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21292,12 +21294,16 @@
 	    }
 	
 	    _createClass(Body, [{
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
-	                "div",
-	                { className: "container" },
-	                _react2.default.createElement("div", { className: "row" })
+	                'div',
+	                { className: 'container' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'row' },
+	                    _react2.default.createElement(_Map2.default, null)
+	                )
 	            );
 	        }
 	    }]);
@@ -21306,6 +21312,55 @@
 	}(_react.Component);
 	
 	exports.default = Body;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Map = function (_Component) {
+	  _inherits(Map, _Component);
+	
+	  function Map() {
+	    _classCallCheck(this, Map);
+	
+	    return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).apply(this, arguments));
+	  }
+	
+	  _createClass(Map, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'jaja'
+	      );
+	    }
+	  }]);
+	
+	  return Map;
+	}(_react.Component);
+	
+	exports.default = Map;
 
 /***/ }
 /******/ ]);
