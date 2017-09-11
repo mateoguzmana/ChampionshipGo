@@ -21540,13 +21540,20 @@
 	        center: { lat: -25.363, lng: 131.044 }
 	      });
 	
-	      var markers = [['León', -25.363, 131.044], ['Salamanca', -26.363, 135.044], ['Zamora', -28.363, 141.044]];
+	      var markers = [['Barichara', -25.363, 131.044], ['Prado', -26.363, 135.044], ['Itagui', -28.363, 141.044]];
 	
 	      var infowindow = new google.maps.InfoWindow();
+	      var icon = {
+	        url: 'https://vignette2.wikia.nocookie.net/fantendo/images/c/c9/Football_Ball.png/revision/latest?cb=20100104174227', // url
+	        scaledSize: new google.maps.Size(30, 30), // scaled size
+	        origin: new google.maps.Point(0, 0), // origin
+	        anchor: new google.maps.Point(0, 0) // anchor
+	      };
 	      var marker, i;
 	      for (i = 0; i < markers.length; i++) {
 	        marker = new google.maps.Marker({
 	          position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+	          icon: icon,
 	          map: this.map
 	        });
 	        google.maps.event.addListener(marker, 'click', function (marker, i) {
