@@ -3,7 +3,7 @@ export default GlobalData = {
     languages: {
         en: {
             title: "${name}",
-            icon: "http://flaglane.com/download/american-flag/american-flag-graphic.png"
+            icon: "http://flaglane.com/download/american-flag/american-flag-medium.jpg"
         },
         sp: {
             title: "${name}",

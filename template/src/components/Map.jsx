@@ -11,6 +11,15 @@ export default class Map extends Component {
       zoom: 5,
       center: { lat: -25.363, lng: 131.044 }
     });
+
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      title:"Hello World!"
+    });
+
+    var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+
+    marker.setMap(this.map);
   }
 
   render() {

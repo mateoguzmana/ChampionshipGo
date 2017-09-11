@@ -21085,7 +21085,7 @@
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _Body = __webpack_require__(172);
+	var _Body = __webpack_require__(175);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
@@ -21139,15 +21139,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Translations = __webpack_require__(175);
+	var _Translations = __webpack_require__(172);
 	
 	var _Translations2 = _interopRequireDefault(_Translations);
 	
-	var _GlobalData = __webpack_require__(174);
+	var _GlobalData = __webpack_require__(173);
 	
 	var _GlobalData2 = _interopRequireDefault(_GlobalData);
 	
-	var _SwitchLanguage = __webpack_require__(176);
+	var _SwitchLanguage = __webpack_require__(174);
 	
 	var _SwitchLanguage2 = _interopRequireDefault(_SwitchLanguage);
 	
@@ -21221,154 +21221,6 @@
 
 /***/ },
 /* 172 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _Map = __webpack_require__(173);
-	
-	var _Map2 = _interopRequireDefault(_Map);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Body = function (_Component) {
-	    _inherits(Body, _Component);
-	
-	    function Body(props) {
-	        _classCallCheck(this, Body);
-	
-	        return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this, props));
-	    }
-	
-	    _createClass(Body, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'container' },
-	                _react2.default.createElement(_Map2.default, null)
-	            );
-	        }
-	    }]);
-	
-	    return Body;
-	}(_react.Component);
-	
-	exports.default = Body;
-
-/***/ },
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Map = function (_Component) {
-	  _inherits(Map, _Component);
-	
-	  function Map(props) {
-	    _classCallCheck(this, Map);
-	
-	    return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, props));
-	  }
-	
-	  _createClass(Map, [{
-	    key: "componentDidMount",
-	    value: function componentDidMount() {
-	      this.map = new google.maps.Map(this.refs.map, {
-	        zoom: 5,
-	        center: { lat: -25.363, lng: 131.044 }
-	      });
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement("div", {
-	        id: "map",
-	        ref: "map",
-	        className: "map",
-	        style: {
-	          width: window.innerWidth + "px",
-	          height: window.innerHeight + "px",
-	          marginTop: "-25px",
-	          marginLeft: "-390px",
-	          position: "relative",
-	          overflow: "visible"
-	        } });
-	    }
-	  }]);
-	
-	  return Map;
-	}(_react.Component);
-	
-	exports.default = Map;
-
-/***/ },
-/* 174 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var GlobalData = void 0;
-	exports.default = GlobalData = {
-	    languages: {
-	        en: {
-	            title: "${name}",
-	            icon: "http://flaglane.com/download/american-flag/american-flag-graphic.png"
-	        },
-	        sp: {
-	            title: "${name}",
-	            icon: "http://static.donquijote.org/images/culture/spanish_flag2.jpg"
-	        },
-	        pt: {
-	            title: "${name}",
-	            icon: "http://www.sciencekids.co.nz/images/pictures/flags680/Brazil.jpg"
-	        },
-	        fr: {
-	            title: "${name}",
-	            icon: "http://www.worldatlas.com/webimage/flags/countrys/zzzflags/frlarge.gif"
-	        }
-	    }
-	};
-
-/***/ },
-/* 175 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21423,7 +21275,38 @@
 	};
 
 /***/ },
-/* 176 */
+/* 173 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var GlobalData = void 0;
+	exports.default = GlobalData = {
+	    languages: {
+	        en: {
+	            title: "${name}",
+	            icon: "http://flaglane.com/download/american-flag/american-flag-medium.jpg"
+	        },
+	        sp: {
+	            title: "${name}",
+	            icon: "http://static.donquijote.org/images/culture/spanish_flag2.jpg"
+	        },
+	        pt: {
+	            title: "${name}",
+	            icon: "http://www.sciencekids.co.nz/images/pictures/flags680/Brazil.jpg"
+	        },
+	        fr: {
+	            title: "${name}",
+	            icon: "http://www.worldatlas.com/webimage/flags/countrys/zzzflags/frlarge.gif"
+	        }
+	    }
+	};
+
+/***/ },
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21438,11 +21321,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Translations = __webpack_require__(175);
+	var _Translations = __webpack_require__(172);
 	
 	var _Translations2 = _interopRequireDefault(_Translations);
 	
-	var _GlobalData = __webpack_require__(174);
+	var _GlobalData = __webpack_require__(173);
 	
 	var _GlobalData2 = _interopRequireDefault(_GlobalData);
 	
@@ -21562,6 +21445,132 @@
 	}(_react.Component);
 	
 	exports.default = SwitchLanguage;
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Map = __webpack_require__(176);
+	
+	var _Map2 = _interopRequireDefault(_Map);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Body = function (_Component) {
+	    _inherits(Body, _Component);
+	
+	    function Body(props) {
+	        _classCallCheck(this, Body);
+	
+	        return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).call(this, props));
+	    }
+	
+	    _createClass(Body, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'container' },
+	                _react2.default.createElement(_Map2.default, null)
+	            );
+	        }
+	    }]);
+	
+	    return Body;
+	}(_react.Component);
+	
+	exports.default = Body;
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Map = function (_Component) {
+	  _inherits(Map, _Component);
+	
+	  function Map(props) {
+	    _classCallCheck(this, Map);
+	
+	    return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, props));
+	  }
+	
+	  _createClass(Map, [{
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
+	      this.map = new google.maps.Map(this.refs.map, {
+	        zoom: 5,
+	        center: { lat: -25.363, lng: 131.044 }
+	      });
+	
+	      var marker = new google.maps.Marker({
+	        position: myLatlng,
+	        title: "Hello World!"
+	      });
+	
+	      var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
+	
+	      marker.setMap(this.map);
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement("div", {
+	        id: "map",
+	        ref: "map",
+	        className: "map",
+	        style: {
+	          width: window.innerWidth + "px",
+	          height: window.innerHeight + "px",
+	          marginTop: "-25px",
+	          marginLeft: "-390px",
+	          position: "relative",
+	          overflow: "visible"
+	        } });
+	    }
+	  }]);
+	
+	  return Map;
+	}(_react.Component);
+	
+	exports.default = Map;
 
 /***/ }
 /******/ ]);
