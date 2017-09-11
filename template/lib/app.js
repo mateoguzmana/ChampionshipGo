@@ -21542,12 +21542,19 @@
 	
 	      var markers = [['León', -25.363, 131.044], ['Salamanca', -26.363, 135.044], ['Zamora', -28.363, 141.044]];
 	
+	      var infowindow = new google.maps.InfoWindow();
 	      var marker, i;
 	      for (i = 0; i < markers.length; i++) {
 	        marker = new google.maps.Marker({
 	          position: new google.maps.LatLng(markers[i][1], markers[i][2]),
 	          map: this.map
 	        });
+	        google.maps.event.addListener(marker, 'click', function (marker, i) {
+	          return function () {
+	            infowindow.setContent(markers[i][0]);
+	            infowindow.open(map, marker);
+	          };
+	        }(marker, i));
 	      }
 	    }
 	  }, {
