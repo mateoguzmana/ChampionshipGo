@@ -12,14 +12,20 @@ export default class Map extends Component {
       center: { lat: -25.363, lng: 131.044 }
     });
 
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      title:"Hello World!"
-    });
 
-    var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+    var markers = [
+      ['León', -25.363, 131.044],
+      ['Salamanca', -26.363, 135.044],
+      ['Zamora', -28.363, 141.044]
+    ];
 
-    marker.setMap(this.map);
+    var marker, i;
+    for (i = 0; i < markers.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+        map: this.map
+      });
+    }
   }
 
   render() {

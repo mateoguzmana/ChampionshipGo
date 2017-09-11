@@ -21503,7 +21503,7 @@
 /* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21533,29 +21533,30 @@
 	  }
 	
 	  _createClass(Map, [{
-	    key: "componentDidMount",
+	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      this.map = new google.maps.Map(this.refs.map, {
 	        zoom: 5,
 	        center: { lat: -25.363, lng: 131.044 }
 	      });
 	
-	      var marker = new google.maps.Marker({
-	        position: myLatlng,
-	        title: "Hello World!"
-	      });
+	      var markers = [['León', -25.363, 131.044], ['Salamanca', -26.363, 135.044], ['Zamora', -28.363, 141.044]];
 	
-	      var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
-	
-	      marker.setMap(this.map);
+	      var marker, i;
+	      for (i = 0; i < markers.length; i++) {
+	        marker = new google.maps.Marker({
+	          position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+	          map: this.map
+	        });
+	      }
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement("div", {
-	        id: "map",
-	        ref: "map",
-	        className: "map",
+	      return _react2.default.createElement('div', {
+	        id: 'map',
+	        ref: 'map',
+	        className: 'map',
 	        style: {
 	          width: window.innerWidth + "px",
 	          height: window.innerHeight + "px",
