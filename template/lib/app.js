@@ -21506,7 +21506,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -21524,77 +21524,91 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var Map = function (_Component) {
-	  _inherits(Map, _Component);
+	    _inherits(Map, _Component);
 	
-	  function Map(props) {
-	    _classCallCheck(this, Map);
+	    function Map(props) {
+	        _classCallCheck(this, Map);
 	
-	    return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, props));
-	  }
-	
-	  _createClass(Map, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      this.map = new google.maps.Map(this.refs.map, {
-	        zoom: 5,
-	        center: { lat: -25.363, lng: 131.044 }
-	      });
-	
-	      var markers = [['Barichara', -25.363, 131.044], ['Prado', -26.363, 135.044], ['Itagui', -28.363, 141.044]];
-	
-	      var infowindow = new google.maps.InfoWindow();
-	
-	      var icon = {
-	        url: 'https://vignette2.wikia.nocookie.net/fantendo/images/c/c9/Football_Ball.png/revision/latest?cb=20100104174227', // url
-	        scaledSize: new google.maps.Size(30, 30), // scaled size
-	        origin: new google.maps.Point(0, 0), // origin
-	        anchor: new google.maps.Point(0, 0) // anchor
-	      };
-	
-	      var marker, i;
-	
-	      for (i = 0; i < markers.length; i++) {
-	
-	        marker = new google.maps.Marker({
-	          position: new google.maps.LatLng(markers[i][1], markers[i][2]),
-	          icon: icon,
-	          map: this.map
-	        });
-	
-	        var self = this;
-	        google.maps.event.addListener(marker, 'click', function (marker, i) {
-	          return function () {
-	            infowindow.setContent(markers[i][0]);
-	            infowindow.open(map, marker);
-	            self.openInfo(i);
-	          };
-	        }(marker, i));
-	      }
+	        return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, props));
 	    }
-	  }, {
-	    key: 'openInfo',
-	    value: function openInfo(i) {
-	      alert('Map ' + i);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement('div', {
-	        id: 'map',
-	        ref: 'map',
-	        className: 'map',
-	        style: {
-	          width: window.innerWidth + "px",
-	          height: window.innerHeight + "px",
-	          marginTop: "-25px",
-	          marginLeft: "-390px",
-	          position: "relative",
-	          overflow: "visible"
-	        } });
-	    }
-	  }]);
 	
-	  return Map;
+	    _createClass(Map, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	            var _this2 = this;
+	
+	            // create simple map in a specific coordenate
+	            this.map = new google.maps.Map(this.refs.map, {
+	                zoom: 5,
+	                center: { lat: -25.363, lng: 131.044 }
+	            });
+	
+	            // define markers
+	            var markers = [['Barichara', -25.363, 131.044], ['Prado', -26.363, 135.044], ['Itagui', -28.363, 141.044]];
+	
+	            var infowindow = new google.maps.InfoWindow();
+	
+	            // defined icon and resize it
+	            var icon = {
+	                url: 'https://vignette2.wikia.nocookie.net/fantendo/images/c/c9/Football_Ball.png/revision/latest?cb=20100104174227', // url
+	                scaledSize: new google.maps.Size(30, 30), // scaled size
+	                origin: new google.maps.Point(0, 0), // origin
+	                anchor: new google.maps.Point(0, 0) // anchor
+	            };
+	
+	            var marker, i;
+	
+	            // print multiple markers
+	
+	            var _loop = function _loop() {
+	
+	                // define markers in map
+	                marker = new google.maps.Marker({
+	                    position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+	                    icon: icon,
+	                    map: _this2.map
+	                });
+	
+	                var self = _this2;
+	
+	                // event for each marker
+	                google.maps.event.addListener(marker, 'click', function (marker, i) {
+	                    return function () {
+	                        infowindow.setContent(markers[i][0]);
+	                        infowindow.open(map, marker);
+	                        self.openInfo(i);
+	                    };
+	                }(marker, i));
+	            };
+	
+	            for (i = 0; i < markers.length; i++) {
+	                _loop();
+	            }
+	        }
+	    }, {
+	        key: 'openInfo',
+	        value: function openInfo(i) {
+	            alert('Map ' + i);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement('div', {
+	                id: 'map',
+	                ref: 'map',
+	                className: 'map',
+	                style: {
+	                    width: window.innerWidth + "px",
+	                    height: window.innerHeight + "px",
+	                    marginTop: "-25px",
+	                    marginLeft: "-390px",
+	                    position: "relative",
+	                    overflow: "visible"
+	                } });
+	        }
+	    }]);
+	
+	    return Map;
 	}(_react.Component);
 	
 	exports.default = Map;
