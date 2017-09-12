@@ -17,7 +17,34 @@ export default class InfoModal extends Component {
                             <h4 className="modal-title">Barichara field {this.props.idField}</h4>
                         </div>
                         <div className="modal-body">
-                            <p>Some text in the modal.</p>
+                            <div className="row">
+                                <div className="col-sm-3">
+                                    <div className="col-sm-12">
+                                        <img
+                                            className="smallImageField"
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j"
+                                        />
+                                    </div>
+                                    <div className="col-sm-12">
+                                        <img
+                                        className="smallImageField"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j"
+                                        />
+                                    </div>
+                                    <div className="col-sm-12">
+                                        <img
+                                        className="smallImageField"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="col-sm-9">
+                                    <img
+                                        className="bigImageField"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j"
+                                    />
+                                </div>
+                            </div>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>

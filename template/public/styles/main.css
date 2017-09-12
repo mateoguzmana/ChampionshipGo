@@ -1,10 +1,19 @@
+/* images styles */
 .languageIcon{
     width: 20px;
+}
+.smallImageField{
+    width: 95%;
+    margin: 10px 10px 10px 45px;
+}
+.bigImageField{
+    width: 89.7%;
+    margin: 10px 10px 10px 65px;
 }
 /* info modal size */
 .infoModal .modal-dialog{
     width: 90%;
-    height: 80%;
+    height: 83%;
 }
 .infoModal .modal-content{
     width: 100%;
