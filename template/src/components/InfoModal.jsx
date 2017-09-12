@@ -7,6 +7,22 @@ export default class InfoModal extends Component {
         super();
     }
 
+    componentDidMount(){
+        
+        let self = this; 
+
+        $(".smallImageField").click(function(){
+
+            let image = $(this).attr("src");
+            self.changeImage(image);
+
+        });
+    }
+
+    changeImage(image){
+        $(".bigImageField").attr("src", image);
+    }
+
     render() {
         return (
             <div className="modal fade infoModal" id="myModal" role="dialog">

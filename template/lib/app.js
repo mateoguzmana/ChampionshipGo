@@ -21662,6 +21662,23 @@
 	    }
 	
 	    _createClass(InfoModal, [{
+	        key: 'componentDidMount',
+	        value: function componentDidMount() {
+	
+	            var self = this;
+	
+	            $(".smallImageField").click(function () {
+	
+	                var image = $(this).attr("src");
+	                self.changeImage(image);
+	            });
+	        }
+	    }, {
+	        key: 'changeImage',
+	        value: function changeImage(image) {
+	            $(".bigImageField").attr("src", image);
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
