@@ -21555,8 +21555,6 @@
 	            // define markers
 	            var markers = [['Barichara', -25.363, 131.044], ['Prado', -26.363, 135.044], ['Itagui', -28.363, 141.044]];
 	
-	            var infowindow = new google.maps.InfoWindow();
-	
 	            // defined icon and resize it
 	            var icon = {
 	                url: 'https://vignette2.wikia.nocookie.net/fantendo/images/c/c9/Football_Ball.png/revision/latest?cb=20100104174227', // url
@@ -21583,8 +21581,6 @@
 	                // event for each marker
 	                google.maps.event.addListener(marker, 'click', function (marker, i) {
 	                    return function () {
-	                        infowindow.setContent(markers[i][0]);
-	                        infowindow.open(map, marker);
 	                        self.openInfo(i);
 	                    };
 	                }(marker, i));
@@ -21688,6 +21684,7 @@
 	                            _react2.default.createElement(
 	                                'h4',
 	                                { className: 'modal-title' },
+	                                'Barichara field ',
 	                                this.props.idField
 	                            )
 	                        ),

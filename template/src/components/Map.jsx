@@ -25,8 +25,6 @@ export default class Map extends Component {
             ['Itagui', -28.363, 141.044]
         ];
 
-        var infowindow = new google.maps.InfoWindow();
-
         // defined icon and resize it
         var icon = {
             url: 'https://vignette2.wikia.nocookie.net/fantendo/images/c/c9/Football_Ball.png/revision/latest?cb=20100104174227', // url
@@ -52,8 +50,6 @@ export default class Map extends Component {
             // event for each marker
             google.maps.event.addListener(marker, 'click', (function (marker, i) {
                 return function () {
-                    infowindow.setContent(markers[i][0]);
-                    infowindow.open(map, marker);
                     self.openInfo(i);
                 }
             })(marker, i));
