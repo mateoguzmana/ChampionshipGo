@@ -21533,7 +21533,12 @@
 	    function Map(props) {
 	        _classCallCheck(this, Map);
 	
-	        return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, props));
+	
+	        _this.state = {
+	            idField: null
+	        };
+	        return _this;
 	    }
 	
 	    _createClass(Map, [{
@@ -21592,6 +21597,7 @@
 	    }, {
 	        key: 'openInfo',
 	        value: function openInfo(i) {
+	            this.setState({ idField: i });
 	            $('#myModal').modal('show');
 	        }
 	    }, {
@@ -21612,7 +21618,7 @@
 	                        position: "relative",
 	                        overflow: "visible"
 	                    } }),
-	                _react2.default.createElement(_InfoModal2.default, null)
+	                _react2.default.createElement(_InfoModal2.default, { idField: this.state.idField })
 	            );
 	        }
 	    }]);
@@ -21682,7 +21688,7 @@
 	                            _react2.default.createElement(
 	                                'h4',
 	                                { className: 'modal-title' },
-	                                'Modal Header'
+	                                this.props.idField
 	                            )
 	                        ),
 	                        _react2.default.createElement(

@@ -5,6 +5,9 @@ export default class Map extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            idField: null
+        }
     }
 
     componentDidMount() {
@@ -59,7 +62,8 @@ export default class Map extends Component {
     }
 
     openInfo(i) {
-        $('#myModal').modal('show'); 
+        this.setState({ idField: i });
+        $('#myModal').modal('show');
     }
 
     render() {
@@ -78,7 +82,7 @@ export default class Map extends Component {
                         overflow: "visible"
                     }}>
                 </div>
-                <InfoModal/>
+                <InfoModal idField={this.state.idField} />
             </div>
         );
     }
