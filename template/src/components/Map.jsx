@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import InfoModal from './InfoModal';
 
 export default class Map extends Component {
 
@@ -58,23 +59,26 @@ export default class Map extends Component {
     }
 
     openInfo(i) {
-        alert(`Map ${i}`);
+        $('#myModal').modal('show'); 
     }
 
     render() {
         return (
-            <div
-                id="map"
-                ref="map"
-                className="map"
-                style={{
-                    width: window.innerWidth + "px",
-                    height: window.innerHeight + "px",
-                    marginTop: "-25px",
-                    marginLeft: "-390px",
-                    position: "relative",
-                    overflow: "visible"
-                }}>
+            <div>
+                <div
+                    id="map"
+                    ref="map"
+                    className="map"
+                    style={{
+                        width: window.innerWidth + "px",
+                        height: window.innerHeight + "px",
+                        marginTop: "-25px",
+                        marginLeft: "-390px",
+                        position: "relative",
+                        overflow: "visible"
+                    }}>
+                </div>
+                <InfoModal/>
             </div>
         );
     }

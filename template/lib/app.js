@@ -21515,6 +21515,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _InfoModal = __webpack_require__(177);
+	
+	var _InfoModal2 = _interopRequireDefault(_InfoModal);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21588,23 +21592,28 @@
 	    }, {
 	        key: 'openInfo',
 	        value: function openInfo(i) {
-	            alert('Map ' + i);
+	            $('#myModal').modal('show');
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('div', {
-	                id: 'map',
-	                ref: 'map',
-	                className: 'map',
-	                style: {
-	                    width: window.innerWidth + "px",
-	                    height: window.innerHeight + "px",
-	                    marginTop: "-25px",
-	                    marginLeft: "-390px",
-	                    position: "relative",
-	                    overflow: "visible"
-	                } });
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('div', {
+	                    id: 'map',
+	                    ref: 'map',
+	                    className: 'map',
+	                    style: {
+	                        width: window.innerWidth + "px",
+	                        height: window.innerHeight + "px",
+	                        marginTop: "-25px",
+	                        marginLeft: "-390px",
+	                        position: "relative",
+	                        overflow: "visible"
+	                    } }),
+	                _react2.default.createElement(_InfoModal2.default, null)
+	            );
 	        }
 	    }]);
 	
@@ -21612,6 +21621,98 @@
 	}(_react.Component);
 	
 	exports.default = Map;
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Translations = __webpack_require__(172);
+	
+	var _Translations2 = _interopRequireDefault(_Translations);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var InfoModal = function (_Component) {
+	    _inherits(InfoModal, _Component);
+	
+	    function InfoModal() {
+	        _classCallCheck(this, InfoModal);
+	
+	        return _possibleConstructorReturn(this, (InfoModal.__proto__ || Object.getPrototypeOf(InfoModal)).call(this));
+	    }
+	
+	    _createClass(InfoModal, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'modal fade', id: 'myModal', role: 'dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-dialog' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'modal-content' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'modal-header' },
+	                            _react2.default.createElement(
+	                                'button',
+	                                { type: 'button', className: 'close', 'data-dismiss': 'modal' },
+	                                '\xD7'
+	                            ),
+	                            _react2.default.createElement(
+	                                'h4',
+	                                { className: 'modal-title' },
+	                                'Modal Header'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'modal-body' },
+	                            _react2.default.createElement(
+	                                'p',
+	                                null,
+	                                'Some text in the modal.'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'modal-footer' },
+	                            _react2.default.createElement(
+	                                'button',
+	                                { type: 'button', className: 'btn btn-default', 'data-dismiss': 'modal' },
+	                                'Close'
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return InfoModal;
+	}(_react.Component);
+	
+	exports.default = InfoModal;
 
 /***/ }
 /******/ ]);
