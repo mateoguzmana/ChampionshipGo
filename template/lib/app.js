@@ -21702,7 +21702,7 @@
 	                                        { className: 'col-sm-12' },
 	                                        _react2.default.createElement('img', {
 	                                            className: 'smallImageField',
-	                                            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j'
+	                                            src: 'https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585'
 	                                        })
 	                                    ),
 	                                    _react2.default.createElement(
@@ -21710,7 +21710,7 @@
 	                                        { className: 'col-sm-12' },
 	                                        _react2.default.createElement('img', {
 	                                            className: 'smallImageField',
-	                                            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j'
+	                                            src: 'http://colegiokambes.com/kambes2/images/ParaWeb/futbol.jpg'
 	                                        })
 	                                    ),
 	                                    _react2.default.createElement(
@@ -21727,7 +21727,7 @@
 	                                    { className: 'col-sm-9' },
 	                                    _react2.default.createElement('img', {
 	                                        className: 'bigImageField',
-	                                        src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j'
+	                                        src: 'https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585'
 	                                    })
 	                                )
 	                            )

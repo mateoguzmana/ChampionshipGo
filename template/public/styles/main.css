@@ -3,17 +3,21 @@
     width: 20px;
 }
 .smallImageField{
+    cursor: pointer;
     width: 95%;
+    height: auto;
     margin: 10px 10px 10px 45px;
 }
 .bigImageField{
-    width: 89.7%;
-    margin: 10px 10px 10px 65px;
+    cursor: pointer;
+    width: 92.8%;
+    height: auto;
+    margin: 10px 10px 10px 35px;
 }
 /* info modal size */
 .infoModal .modal-dialog{
     width: 90%;
-    height: 83%;
+    height: auto;
 }
 .infoModal .modal-content{
     width: 100%;
