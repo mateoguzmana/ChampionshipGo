@@ -21640,6 +21640,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _Image = __webpack_require__(178);
+	
+	var _Image2 = _interopRequireDefault(_Image);
+	
 	var _Translations = __webpack_require__(172);
 	
 	var _Translations2 = _interopRequireDefault(_Translations);
@@ -21658,25 +21662,23 @@
 	    function InfoModal() {
 	        _classCallCheck(this, InfoModal);
 	
-	        return _possibleConstructorReturn(this, (InfoModal.__proto__ || Object.getPrototypeOf(InfoModal)).call(this));
+	        var _this = _possibleConstructorReturn(this, (InfoModal.__proto__ || Object.getPrototypeOf(InfoModal)).call(this));
+	
+	        _this.state = {
+	            bigImage: "https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585"
+	        };
+	
+	        _this.changeImage = _this.changeImage.bind(_this);
+	        return _this;
 	    }
 	
 	    _createClass(InfoModal, [{
 	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	
-	            var self = this;
-	
-	            $(".smallImageField").click(function () {
-	
-	                var image = $(this).attr("src");
-	                self.changeImage(image);
-	            });
-	        }
+	        value: function componentDidMount() {}
 	    }, {
 	        key: 'changeImage',
-	        value: function changeImage(image) {
-	            $(".bigImageField").attr("src", image);
+	        value: function changeImage(event) {
+	            this.setState({ bigImage: event.target.src });
 	        }
 	    }, {
 	        key: 'render',
@@ -21717,35 +21719,23 @@
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'col-sm-12' },
-	                                        _react2.default.createElement('img', {
-	                                            className: 'smallImageField',
-	                                            src: 'https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585'
-	                                        })
+	                                        _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585" })
 	                                    ),
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'col-sm-12' },
-	                                        _react2.default.createElement('img', {
-	                                            className: 'smallImageField',
-	                                            src: 'http://colegiokambes.com/kambes2/images/ParaWeb/futbol.jpg'
-	                                        })
+	                                        _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "http://colegiokambes.com/kambes2/images/ParaWeb/futbol.jpg" })
 	                                    ),
 	                                    _react2.default.createElement(
 	                                        'div',
 	                                        { className: 'col-sm-12' },
-	                                        _react2.default.createElement('img', {
-	                                            className: 'smallImageField',
-	                                            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j'
-	                                        })
+	                                        _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j" })
 	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'col-sm-9' },
-	                                    _react2.default.createElement('img', {
-	                                        className: 'bigImageField',
-	                                        src: 'https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585'
-	                                    })
+	                                    _react2.default.createElement(_Image2.default, { classImage: "bigImageField", image: this.state.bigImage })
 	                                )
 	                            )
 	                        ),
@@ -21768,6 +21758,55 @@
 	}(_react.Component);
 	
 	exports.default = InfoModal;
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Image = function (_Component) {
+	    _inherits(Image, _Component);
+	
+	    function Image() {
+	        _classCallCheck(this, Image);
+	
+	        return _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).call(this));
+	    }
+	
+	    _createClass(Image, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement('img', {
+	                onClick: this.props.onClick,
+	                className: this.props.classImage,
+	                src: this.props.image
+	            });
+	        }
+	    }]);
+	
+	    return Image;
+	}(_react.Component);
+	
+	exports.default = Image;
 
 /***/ }
 /******/ ]);
