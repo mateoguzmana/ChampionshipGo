@@ -1,3 +1,12 @@
 .languageIcon{
     width: 20px;
 }
+/* info modal size */
+.infoModal .modal-dialog{
+    width: 90%;
+    height: 80%;
+}
+.infoModal .modal-content{
+    width: 100%;
+    height: 100%;
+}

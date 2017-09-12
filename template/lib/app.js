@@ -21670,7 +21670,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'modal fade', id: 'myModal', role: 'dialog' },
+	                { className: 'modal fade infoModal', id: 'myModal', role: 'dialog' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'modal-dialog' },
