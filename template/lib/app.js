@@ -21628,13 +21628,17 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _GeneralInformation = __webpack_require__(179);
+	
+	var _GeneralInformation2 = _interopRequireDefault(_GeneralInformation);
+	
 	var _Gallery = __webpack_require__(180);
 	
 	var _Gallery2 = _interopRequireDefault(_Gallery);
 	
-	var _GeneralInformation = __webpack_require__(179);
+	var _Schedule = __webpack_require__(181);
 	
-	var _GeneralInformation2 = _interopRequireDefault(_GeneralInformation);
+	var _Schedule2 = _interopRequireDefault(_Schedule);
 	
 	var _Translations = __webpack_require__(172);
 	
@@ -21711,7 +21715,7 @@
 	                                    _react2.default.createElement(
 	                                        'a',
 	                                        { href: '#3', 'data-toggle': 'tab' },
-	                                        'Availability'
+	                                        'Schedule'
 	                                    )
 	                                )
 	                            )
@@ -21735,92 +21739,7 @@
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'tab-pane', id: '3' },
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'row' },
-	                                        _react2.default.createElement(
-	                                            'div',
-	                                            { className: 'col-sm-3' },
-	                                            '\xA0'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'div',
-	                                            { className: 'col-sm-6' },
-	                                            _react2.default.createElement(
-	                                                'table',
-	                                                { className: 'table' },
-	                                                _react2.default.createElement(
-	                                                    'thead',
-	                                                    null,
-	                                                    _react2.default.createElement(
-	                                                        'tr',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'td',
-	                                                            { className: 'titleTable' },
-	                                                            'Event'
-	                                                        ),
-	                                                        _react2.default.createElement(
-	                                                            'td',
-	                                                            { className: 'titleTable' },
-	                                                            'Date'
-	                                                        )
-	                                                    )
-	                                                ),
-	                                                _react2.default.createElement(
-	                                                    'tbody',
-	                                                    null,
-	                                                    _react2.default.createElement(
-	                                                        'tr',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'td',
-	                                                            null,
-	                                                            'Match'
-	                                                        ),
-	                                                        _react2.default.createElement(
-	                                                            'td',
-	                                                            null,
-	                                                            'date'
-	                                                        )
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'tr',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'td',
-	                                                            null,
-	                                                            'Match'
-	                                                        ),
-	                                                        _react2.default.createElement(
-	                                                            'td',
-	                                                            null,
-	                                                            'date'
-	                                                        )
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'tr',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'td',
-	                                                            null,
-	                                                            'Match'
-	                                                        ),
-	                                                        _react2.default.createElement(
-	                                                            'td',
-	                                                            null,
-	                                                            'date'
-	                                                        )
-	                                                    )
-	                                                )
-	                                            )
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'div',
-	                                            { className: 'col-sm-3' },
-	                                            '\xA0'
-	                                        )
-	                                    )
+	                                    _react2.default.createElement(_Schedule2.default, { idField: this.props.idField })
 	                                )
 	                            )
 	                        ),
@@ -22107,6 +22026,144 @@
 	}(_react.Component);
 	
 	exports.default = Gallery;
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Translations = __webpack_require__(172);
+	
+	var _Translations2 = _interopRequireDefault(_Translations);
+	
+	var _GlobalData = __webpack_require__(173);
+	
+	var _GlobalData2 = _interopRequireDefault(_GlobalData);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Schedule = function (_Component) {
+	    _inherits(Schedule, _Component);
+	
+	    function Schedule() {
+	        _classCallCheck(this, Schedule);
+	
+	        return _possibleConstructorReturn(this, (Schedule.__proto__ || Object.getPrototypeOf(Schedule)).call(this));
+	    }
+	
+	    _createClass(Schedule, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-3' },
+	                    '\xA0'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-6' },
+	                    _react2.default.createElement(
+	                        'table',
+	                        { className: 'table' },
+	                        _react2.default.createElement(
+	                            'thead',
+	                            null,
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    { className: 'titleTable' },
+	                                    'Event'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    { className: 'titleTable' },
+	                                    'Date'
+	                                )
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'tbody',
+	                            null,
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    'Match'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    'date'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    'Match'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    'date'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    'Match'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    'date'
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-3' },
+	                    '\xA0'
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Schedule;
+	}(_react.Component);
+	
+	exports.default = Schedule;
 
 /***/ }
 /******/ ]);
