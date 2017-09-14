@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Image from './Image';
+
+import GeneralInformation from './InfoModalTabs/GeneralInformation';
+
 import Translations from '../data/Translations';
 import GlobalData from '../data/GlobalData';
 
@@ -41,27 +44,7 @@ export default class InfoModal extends Component {
                         <div className="modal-body">
                             <div className="tab-content">
                                 <div className="tab-pane active" id="1">
-                                    <h3>{`General information about the field number ${this.props.idField}`}</h3>
-                                    <div className="row">
-                                        <div className="col-sm-6">
-                                            <table className="table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td className="titleTable">Location</td>
-                                                        <td>Medellín, Colombia</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td className="titleTable">Capacity</td>
-                                                        <td>12 players</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td className="titleTable">Field condition</td>
-                                                        <td>Good</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                                    <GeneralInformation idField={this.props.idField}/>
                                 </div>
                                 <div className="tab-pane" id="2">
                                     <div className="row">
