@@ -37,7 +37,7 @@ export default class Map extends Component {
 
             // define markers in map
             marker = new google.maps.Marker({
-                position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+                position: new google.maps.LatLng(markers[i].latitude, markers[i].longitude),
                 icon: icon,
                 map: this.map
             });

@@ -21563,7 +21563,7 @@
 	
 	                // define markers in map
 	                marker = new google.maps.Marker({
-	                    position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+	                    position: new google.maps.LatLng(markers[i].latitude, markers[i].longitude),
 	                    icon: icon,
 	                    map: _this2.map
 	                });
@@ -22180,7 +22180,19 @@
 	});
 	var StaticDatabase = void 0;
 	exports.default = StaticDatabase = {
-	    fields: [['Barichara', -25.363, 131.044], ['Prado', -26.363, 135.044], ['Itagui', -28.363, 141.044]]
+	    fields: [{
+	        name: 'Barichara',
+	        latitude: -25.363,
+	        longitude: 131.044
+	    }, {
+	        name: 'Prado',
+	        latitude: -26.363,
+	        longitude: 135.044
+	    }, {
+	        name: 'Itagui',
+	        latitude: -28.363,
+	        longitude: 141.044
+	    }]
 	};
 
 /***/ }
