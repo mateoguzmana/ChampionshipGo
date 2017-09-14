@@ -28,18 +28,14 @@ export default Translations = {
             }
         }
     },
-    clothesView: {
-        title: {
-            en: "Clothes",
-            sp: "Ropa",
-            pt: "Roupas",
-            fr: "Vêtements"
-        },
-        description: {
-            en: "Clothes for ${gender}.",
-            sp: "Ropa para ${gender}.",
-            pt: "Roupas pra ${gender}.",
-            fr: "Vêtements pour ${gender}."
+    infoModal: {
+        generalInformationTab: {
+            title: {
+                en: "General Information",
+                sp: "Información General",
+                pt: "Informação Geral",
+                fr: "Informations Générales"
+            }
         }
     }
 }

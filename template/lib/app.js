@@ -21258,18 +21258,14 @@
 	            }
 	        }
 	    },
-	    clothesView: {
-	        title: {
-	            en: "Clothes",
-	            sp: "Ropa",
-	            pt: "Roupas",
-	            fr: "Vêtements"
-	        },
-	        description: {
-	            en: "Clothes for ${gender}.",
-	            sp: "Ropa para ${gender}.",
-	            pt: "Roupas pra ${gender}.",
-	            fr: "Vêtements pour ${gender}."
+	    infoModal: {
+	        generalInformationTab: {
+	            title: {
+	                en: "General Information",
+	                sp: "Información General",
+	                pt: "Informação Geral",
+	                fr: "Informations Générales"
+	            }
 	        }
 	    }
 	};
@@ -21285,10 +21281,11 @@
 	});
 	var GlobalData = void 0;
 	exports.default = GlobalData = {
+	    currentLanguage: localStorage.getItem("language") && localStorage.getItem("language") !== undefined ? localStorage.getItem("language") : "en",
 	    languages: {
 	        en: {
 	            title: "${name}",
-	            icon: "http://flaglane.com/download/american-flag/american-flag-medium.jpg"
+	            icon: "http://flaglane.com/download/american-flag/american-flag-large.png"
 	        },
 	        sp: {
 	            title: "${name}",
@@ -21350,92 +21347,58 @@
 	            listLanguages: null
 	        };
 	        _this.changeLanguage.bind(_this);
-	        _this.createLanguages.bind(_this);
-	        _this.createActualLanguage.bind(_this);
 	        return _this;
 	    }
 	
 	    _createClass(SwitchLanguage, [{
 	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            var _this2 = this;
-	
-	            this.setState({
-	                languageAuto: localStorage.getItem("language") && localStorage.getItem("language") !== undefined ? localStorage.getItem("language") : "en"
-	            });
-	
-	            setTimeout(function () {
-	                _this2.setState({
-	                    listLanguages: _this2.createLanguages(),
-	                    actualLanguage: _this2.createActualLanguage()
-	                });
-	            }, 200);
-	        }
+	        value: function componentDidMount() {}
 	    }, {
 	        key: 'changeLanguage',
 	        value: function changeLanguage(language) {
-	            var _this3 = this;
-	
-	            this.setState({ languageAuto: language });
-	            setTimeout(function () {
-	                _this3.setState({
-	                    listLanguages: _this3.createLanguages(),
-	                    actualLanguage: _this3.createActualLanguage()
-	                });
-	            }, 200);
+	            _GlobalData2.default.currentLanguage = language;
 	            localStorage.setItem("language", language);
-	        }
-	    }, {
-	        key: 'createActualLanguage',
-	        value: function createActualLanguage() {
-	            var data = _GlobalData2.default.languages[this.state.languageAuto];
-	            var leng = _Translations2.default.headerView.languages[this.state.languageAuto][this.state.languageAuto];
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                data.title.replace("${name}", leng),
-	                '\xA0',
-	                _react2.default.createElement('img', { src: data.icon, className: 'languageIcon' })
-	            );
-	        }
-	    }, {
-	        key: 'createLanguages',
-	        value: function createLanguages() {
-	            var _this4 = this;
-	
-	            return Object.keys(_GlobalData2.default.languages).map(function (language, index) {
-	                var data = _GlobalData2.default.languages[language];
-	                var leng = _Translations2.default.headerView.languages[language][_this4.state.languageAuto];
-	                return _react2.default.createElement(
-	                    'li',
-	                    { key: index, onClick: function onClick() {
-	                            return _this4.changeLanguage(language);
-	                        } },
-	                    _react2.default.createElement(
-	                        'a',
-	                        null,
-	                        data.title.replace("${name}", leng),
-	                        '\xA0',
-	                        _react2.default.createElement('img', { src: data.icon, className: 'languageIcon' })
-	                    )
-	                );
-	            });
+	            this.forceUpdate();
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+	
 	            return _react2.default.createElement(
 	                'li',
 	                { className: 'dropdown' },
 	                _react2.default.createElement(
 	                    'a',
 	                    { className: 'dropdown-toggle', 'data-toggle': 'dropdown', href: '#' },
-	                    this.state.actualLanguage
+	                    _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        _GlobalData2.default.languages[_GlobalData2.default.currentLanguage].title.replace("${name}", _Translations2.default.headerView.languages[_GlobalData2.default.currentLanguage][_GlobalData2.default.currentLanguage]),
+	                        '\xA0',
+	                        _react2.default.createElement('img', { src: _GlobalData2.default.languages[_GlobalData2.default.currentLanguage].icon, className: 'languageIcon' })
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'ul',
 	                    { className: 'dropdown-menu' },
-	                    this.state.listLanguages
+	                    Object.keys(_GlobalData2.default.languages).map(function (language, index) {
+	                        var data = _GlobalData2.default.languages[language];
+	                        var leng = _Translations2.default.headerView.languages[language][_GlobalData2.default.currentLanguage];
+	                        return _react2.default.createElement(
+	                            'li',
+	                            { key: index, onClick: function onClick() {
+	                                    return _this2.changeLanguage(language);
+	                                } },
+	                            _react2.default.createElement(
+	                                'a',
+	                                null,
+	                                data.title.replace("${name}", leng),
+	                                '\xA0',
+	                                _react2.default.createElement('img', { src: data.icon, className: 'languageIcon' })
+	                            )
+	                        );
+	                    })
 	                )
 	            );
 	        }
@@ -21648,6 +21611,10 @@
 	
 	var _Translations2 = _interopRequireDefault(_Translations);
 	
+	var _GlobalData = __webpack_require__(173);
+	
+	var _GlobalData2 = _interopRequireDefault(_GlobalData);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21701,10 +21668,35 @@
 	                                '\xD7'
 	                            ),
 	                            _react2.default.createElement(
-	                                'h4',
-	                                { className: 'modal-title' },
-	                                'Barichara field ',
-	                                this.props.idField
+	                                'ul',
+	                                { className: 'nav nav-tabs' },
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    { className: 'active' },
+	                                    _react2.default.createElement(
+	                                        'a',
+	                                        { href: '#1', 'data-toggle': 'tab' },
+	                                        _Translations2.default.infoModal.generalInformationTab.title[_GlobalData2.default.currentLanguage]
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'a',
+	                                        { href: '#2', 'data-toggle': 'tab' },
+	                                        'Images'
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'li',
+	                                    null,
+	                                    _react2.default.createElement(
+	                                        'a',
+	                                        { href: '#3', 'data-toggle': 'tab' },
+	                                        'Availability'
+	                                    )
+	                                )
 	                            )
 	                        ),
 	                        _react2.default.createElement(
@@ -21712,30 +21704,56 @@
 	                            { className: 'modal-body' },
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'row' },
+	                                { className: 'tab-content' },
 	                                _react2.default.createElement(
 	                                    'div',
-	                                    { className: 'col-sm-3' },
+	                                    { className: 'tab-pane active', id: '1' },
 	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'col-sm-12' },
-	                                        _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585" })
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'col-sm-12' },
-	                                        _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "http://colegiokambes.com/kambes2/images/ParaWeb/futbol.jpg" })
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'div',
-	                                        { className: 'col-sm-12' },
-	                                        _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j" })
+	                                        'h3',
+	                                        null,
+	                                        'General information about the field number ' + this.props.idField
 	                                    )
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
-	                                    { className: 'col-sm-9' },
-	                                    _react2.default.createElement(_Image2.default, { classImage: "bigImageField", image: this.state.bigImage })
+	                                    { className: 'tab-pane', id: '2' },
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'row' },
+	                                        _react2.default.createElement(
+	                                            'div',
+	                                            { className: 'col-sm-3' },
+	                                            _react2.default.createElement(
+	                                                'div',
+	                                                { className: 'col-sm-12' },
+	                                                _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585" })
+	                                            ),
+	                                            _react2.default.createElement(
+	                                                'div',
+	                                                { className: 'col-sm-12' },
+	                                                _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "http://colegiokambes.com/kambes2/images/ParaWeb/futbol.jpg" })
+	                                            ),
+	                                            _react2.default.createElement(
+	                                                'div',
+	                                                { className: 'col-sm-12' },
+	                                                _react2.default.createElement(_Image2.default, { onClick: this.changeImage, classImage: "smallImageField", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j" })
+	                                            )
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'div',
+	                                            { className: 'col-sm-9' },
+	                                            _react2.default.createElement(_Image2.default, { classImage: "bigImageField", image: this.state.bigImage })
+	                                        )
+	                                    )
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'tab-pane', id: '3' },
+	                                    _react2.default.createElement(
+	                                        'h3',
+	                                        null,
+	                                        'add clearfix to tab-content (see the css)'
+	                                    )
 	                                )
 	                            )
 	                        ),

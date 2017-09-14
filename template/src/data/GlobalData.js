@@ -1,9 +1,10 @@
 let GlobalData;
 export default GlobalData = {
+    currentLanguage: localStorage.getItem("language") && localStorage.getItem("language") !== undefined ? localStorage.getItem("language") : "en",
     languages: {
         en: {
             title: "${name}",
-            icon: "http://flaglane.com/download/american-flag/american-flag-medium.jpg"
+            icon: "http://flaglane.com/download/american-flag/american-flag-large.png"
         },
         sp: {
             title: "${name}",
