@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-
+import Translations from '../data/Translations';
+import GlobalData from '../data/GlobalData';
 import GeneralInformation from './InfoModalTabs/GeneralInformation';
 import Gallery from './InfoModalTabs/Gallery';
 import Schedule from './InfoModalTabs/Schedule';
-
-import Translations from '../data/Translations';
-import GlobalData from '../data/GlobalData';
 
 export default class InfoModal extends Component {
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InfoModal from './InfoModal';
+import StaticDatabase from '../data/StaticDatabase';
 
 export default class Map extends Component {
 
@@ -19,11 +20,7 @@ export default class Map extends Component {
         });
 
         // define markers
-        var markers = [
-            ['Barichara', -25.363, 131.044],
-            ['Prado', -26.363, 135.044],
-            ['Itagui', -28.363, 141.044]
-        ];
+        var markers = StaticDatabase.fields;
 
         // defined icon and resize it
         var icon = {

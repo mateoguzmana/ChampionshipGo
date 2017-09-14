@@ -21507,6 +21507,10 @@
 	
 	var _InfoModal2 = _interopRequireDefault(_InfoModal);
 	
+	var _StaticDatabase = __webpack_require__(182);
+	
+	var _StaticDatabase2 = _interopRequireDefault(_StaticDatabase);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21541,7 +21545,7 @@
 	            });
 	
 	            // define markers
-	            var markers = [['Barichara', -25.363, 131.044], ['Prado', -26.363, 135.044], ['Itagui', -28.363, 141.044]];
+	            var markers = _StaticDatabase2.default.fields;
 	
 	            // defined icon and resize it
 	            var icon = {
@@ -21628,6 +21632,14 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _Translations = __webpack_require__(172);
+	
+	var _Translations2 = _interopRequireDefault(_Translations);
+	
+	var _GlobalData = __webpack_require__(173);
+	
+	var _GlobalData2 = _interopRequireDefault(_GlobalData);
+	
 	var _GeneralInformation = __webpack_require__(179);
 	
 	var _GeneralInformation2 = _interopRequireDefault(_GeneralInformation);
@@ -21639,14 +21651,6 @@
 	var _Schedule = __webpack_require__(181);
 	
 	var _Schedule2 = _interopRequireDefault(_Schedule);
-	
-	var _Translations = __webpack_require__(172);
-	
-	var _Translations2 = _interopRequireDefault(_Translations);
-	
-	var _GlobalData = __webpack_require__(173);
-	
-	var _GlobalData2 = _interopRequireDefault(_GlobalData);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -22164,6 +22168,20 @@
 	}(_react.Component);
 	
 	exports.default = Schedule;
+
+/***/ },
+/* 182 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var StaticDatabase = void 0;
+	exports.default = StaticDatabase = {
+	    fields: [['Barichara', -25.363, 131.044], ['Prado', -26.363, 135.044], ['Itagui', -28.363, 141.044]]
+	};
 
 /***/ }
 /******/ ]);
