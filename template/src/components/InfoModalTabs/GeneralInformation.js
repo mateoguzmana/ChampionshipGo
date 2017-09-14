@@ -4,8 +4,8 @@ import GlobalData from '../../data/GlobalData';
 
 export default class GeneralInformation extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
     }
 
     render() {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Image from './Image';
 
+import Gallery from './InfoModalTabs/Gallery';
 import GeneralInformation from './InfoModalTabs/GeneralInformation';
 
 import Translations from '../data/Translations';
@@ -10,18 +10,9 @@ export default class InfoModal extends Component {
 
     constructor() {
         super();
-        this.state = {
-            bigImage: "https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585"
-        };
-
-        this.changeImage = this.changeImage.bind(this);
     }
 
     componentDidMount() {
-    }
-
-    changeImage(event) {
-        this.setState({ bigImage: event.target.src });
     }
 
     render() {
@@ -47,22 +38,7 @@ export default class InfoModal extends Component {
                                     <GeneralInformation idField={this.props.idField}/>
                                 </div>
                                 <div className="tab-pane" id="2">
-                                    <div className="row">
-                                        <div className="col-sm-3">
-                                            <div className="col-sm-12">
-                                                <Image onClick={this.changeImage} classImage={"smallImageField"} image={"https://luismiguelguerrero.files.wordpress.com/2009/10/nou.jpg?w=585"} />
-                                            </div>
-                                            <div className="col-sm-12">
-                                                <Image onClick={this.changeImage} classImage={"smallImageField"} image={"http://colegiokambes.com/kambes2/images/ParaWeb/futbol.jpg"} />
-                                            </div>
-                                            <div className="col-sm-12">
-                                                <Image onClick={this.changeImage} classImage={"smallImageField"} image={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASPN16MUKJdPhuFluYPAh_B0GMz6dwzTV75whjI9d6xh3bY5j"} />
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-9">
-                                            <Image classImage={"bigImageField"} image={this.state.bigImage} />
-                                        </div>
-                                    </div>
+                                    <Gallery idField={this.props.idField}/>
                                 </div>
                                 <div className="tab-pane" id="3">
                                 <div className="row">
