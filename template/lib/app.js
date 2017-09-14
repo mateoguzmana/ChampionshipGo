@@ -21282,6 +21282,14 @@
 	                pt: "Informação Geral",
 	                fr: "Informations Générales"
 	            }
+	        },
+	        galleryTab: {
+	            title: {
+	                en: "Gallery",
+	                sp: "Galería",
+	                pt: "Galeria",
+	                fr: "Galerie"
+	            }
 	        }
 	    }
 	};
@@ -21702,7 +21710,7 @@
 	                                    _react2.default.createElement(
 	                                        'a',
 	                                        { href: '#2', 'data-toggle': 'tab' },
-	                                        'Images'
+	                                        _Translations2.default.infoModal.galleryTab.title[_GlobalData2.default.currentLanguage]
 	                                    )
 	                                ),
 	                                _react2.default.createElement(
@@ -21729,6 +21737,64 @@
 	                                        'h3',
 	                                        null,
 	                                        'General information about the field number ' + this.props.idField
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'div',
+	                                        { className: 'row' },
+	                                        _react2.default.createElement(
+	                                            'div',
+	                                            { className: 'col-sm-6' },
+	                                            _react2.default.createElement(
+	                                                'table',
+	                                                { className: 'table' },
+	                                                _react2.default.createElement(
+	                                                    'tbody',
+	                                                    null,
+	                                                    _react2.default.createElement(
+	                                                        'tr',
+	                                                        null,
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            { className: 'titleTable' },
+	                                                            'Location'
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            'Medell\xEDn, Colombia'
+	                                                        )
+	                                                    ),
+	                                                    _react2.default.createElement(
+	                                                        'tr',
+	                                                        null,
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            { className: 'titleTable' },
+	                                                            'Capacity'
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            '12 players'
+	                                                        )
+	                                                    ),
+	                                                    _react2.default.createElement(
+	                                                        'tr',
+	                                                        null,
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            { className: 'titleTable' },
+	                                                            'Field condition'
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            'Good'
+	                                                        )
+	                                                    )
+	                                                )
+	                                            )
+	                                        )
 	                                    )
 	                                ),
 	                                _react2.default.createElement(
@@ -21767,9 +21833,90 @@
 	                                    'div',
 	                                    { className: 'tab-pane', id: '3' },
 	                                    _react2.default.createElement(
-	                                        'h3',
-	                                        null,
-	                                        'add clearfix to tab-content (see the css)'
+	                                        'div',
+	                                        { className: 'row' },
+	                                        _react2.default.createElement(
+	                                            'div',
+	                                            { className: 'col-sm-3' },
+	                                            '\xA0'
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'div',
+	                                            { className: 'col-sm-6' },
+	                                            _react2.default.createElement(
+	                                                'table',
+	                                                { className: 'table' },
+	                                                _react2.default.createElement(
+	                                                    'thead',
+	                                                    null,
+	                                                    _react2.default.createElement(
+	                                                        'tr',
+	                                                        null,
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            { className: 'titleTable' },
+	                                                            'Event'
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            { className: 'titleTable' },
+	                                                            'Date'
+	                                                        )
+	                                                    )
+	                                                ),
+	                                                _react2.default.createElement(
+	                                                    'tbody',
+	                                                    null,
+	                                                    _react2.default.createElement(
+	                                                        'tr',
+	                                                        null,
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            'Match'
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            'date'
+	                                                        )
+	                                                    ),
+	                                                    _react2.default.createElement(
+	                                                        'tr',
+	                                                        null,
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            'Match'
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            'date'
+	                                                        )
+	                                                    ),
+	                                                    _react2.default.createElement(
+	                                                        'tr',
+	                                                        null,
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            'Match'
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'td',
+	                                                            null,
+	                                                            'date'
+	                                                        )
+	                                                    )
+	                                                )
+	                                            )
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'div',
+	                                            { className: 'col-sm-3' },
+	                                            '\xA0'
+	                                        )
 	                                    )
 	                                )
 	                            )

@@ -32,7 +32,7 @@ export default class InfoModal extends Component {
                                 <li className="active">
                                     <a href="#1" data-toggle="tab">{Translations.infoModal.generalInformationTab.title[GlobalData.currentLanguage]}</a>
                                 </li>
-                                <li><a href="#2" data-toggle="tab">Images</a>
+                                <li><a href="#2" data-toggle="tab">{Translations.infoModal.galleryTab.title[GlobalData.currentLanguage]}</a>
                                 </li>
                                 <li><a href="#3" data-toggle="tab">Availability</a>
                                 </li>
@@ -42,6 +42,26 @@ export default class InfoModal extends Component {
                             <div className="tab-content">
                                 <div className="tab-pane active" id="1">
                                     <h3>{`General information about the field number ${this.props.idField}`}</h3>
+                                    <div className="row">
+                                        <div className="col-sm-6">
+                                            <table className="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td className="titleTable">Location</td>
+                                                        <td>Medellín, Colombia</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td className="titleTable">Capacity</td>
+                                                        <td>12 players</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td className="titleTable">Field condition</td>
+                                                        <td>Good</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="tab-pane" id="2">
                                     <div className="row">
@@ -62,7 +82,34 @@ export default class InfoModal extends Component {
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="3">
-                                    <h3>add clearfix to tab-content (see the css)</h3>
+                                <div className="row">
+                                        <div className="col-sm-3">&nbsp;</div>
+                                        <div className="col-sm-6">
+                                            <table className="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td className="titleTable">Event</td>
+                                                        <td className="titleTable">Date</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Match</td>
+                                                        <td>date</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Match</td>
+                                                        <td>date</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Match</td>
+                                                        <td>date</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div className="col-sm-3">&nbsp;</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

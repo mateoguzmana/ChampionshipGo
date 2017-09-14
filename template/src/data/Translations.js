@@ -48,6 +48,14 @@ export default Translations = {
                 pt: "Informação Geral",
                 fr: "Informations Générales"
             }
+        },
+        galleryTab: {
+            title: {
+                en: "Gallery",
+                sp: "Galería",
+                pt: "Galeria",
+                fr: "Galerie"
+            }
         }
     }
 }
