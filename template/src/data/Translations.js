@@ -1,6 +1,18 @@
 let Translations;
 export default Translations = {
     headerView: {
+        worldMapTitle: {
+            en: "World Map",
+            sp: "Mapa Mundial",
+            pt: "Mapa Mundial",
+            fr: "Carte Du Monde"
+        },
+        matchTitle: {
+            en: "Match!",
+            sp: "¡Juega!",
+            pt: "Combine!",
+            fr: "Rencontre!"
+        },
         languages: {
             en: {
                 en: "English",

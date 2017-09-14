@@ -5,7 +5,7 @@ import SwitchLanguage from './SwitchLanguage';
 
 export default class Header extends Component {
 
-  constructor(){
+  constructor() {
     super();
   }
 
@@ -17,11 +17,11 @@ export default class Header extends Component {
             <a className="navbar-brand" href="#">ChampionshipGo</a>
           </div>
           <ul className="nav navbar-nav">
-            <li className="active"><a href="#">Mundial Map</a></li>
+            <li className="active"><a href="#">{Translations.headerView.worldMapTitle[GlobalData.currentLanguage]}</a></li>
           </ul>
-          <button className="btn btn-danger navbar-btn">Match!</button>
+          <button className="btn btn-danger navbar-btn">{Translations.headerView.matchTitle[GlobalData.currentLanguage]}</button>
           <ul className="nav navbar-nav navbar-right">
-            <SwitchLanguage />
+            <SwitchLanguage onChangeLanguage={() => { this.forceUpdate() }} />
           </ul>
         </div>
       </nav>

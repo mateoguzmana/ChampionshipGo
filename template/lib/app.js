@@ -21171,6 +21171,8 @@
 	  _createClass(Header, [{
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
 	      return _react2.default.createElement(
 	        'nav',
 	        { className: 'navbar navbar-inverse' },
@@ -21195,19 +21197,21 @@
 	              _react2.default.createElement(
 	                'a',
 	                { href: '#' },
-	                'Mundial Map'
+	                _Translations2.default.headerView.worldMapTitle[_GlobalData2.default.currentLanguage]
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'button',
 	            { className: 'btn btn-danger navbar-btn' },
-	            'Match!'
+	            _Translations2.default.headerView.matchTitle[_GlobalData2.default.currentLanguage]
 	          ),
 	          _react2.default.createElement(
 	            'ul',
 	            { className: 'nav navbar-nav navbar-right' },
-	            _react2.default.createElement(_SwitchLanguage2.default, null)
+	            _react2.default.createElement(_SwitchLanguage2.default, { onChangeLanguage: function onChangeLanguage() {
+	                _this2.forceUpdate();
+	              } })
 	          )
 	        )
 	      );
@@ -21231,6 +21235,18 @@
 	var Translations = void 0;
 	exports.default = Translations = {
 	    headerView: {
+	        worldMapTitle: {
+	            en: "World Map",
+	            sp: "Mapa Mundial",
+	            pt: "Mapa Mundial",
+	            fr: "Carte Du Monde"
+	        },
+	        matchTitle: {
+	            en: "Match!",
+	            sp: "¡Juega!",
+	            pt: "Combine!",
+	            fr: "Rencontre!"
+	        },
 	        languages: {
 	            en: {
 	                en: "English",
@@ -21358,6 +21374,7 @@
 	        value: function changeLanguage(language) {
 	            _GlobalData2.default.currentLanguage = language;
 	            localStorage.setItem("language", language);
+	            this.props.onChangeLanguage();
 	            this.forceUpdate();
 	        }
 	    }, {

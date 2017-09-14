@@ -19,6 +19,7 @@ export default class SwitchLanguage extends Component {
     changeLanguage(language) {
         GlobalData.currentLanguage = language;
         localStorage.setItem("language", language);
+        this.props.onChangeLanguage();
         this.forceUpdate();
     }
 
