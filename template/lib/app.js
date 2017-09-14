@@ -21840,6 +21840,14 @@
 	
 	var _GlobalData2 = _interopRequireDefault(_GlobalData);
 	
+	var _StaticDatabase = __webpack_require__(182);
+	
+	var _StaticDatabase2 = _interopRequireDefault(_StaticDatabase);
+	
+	var _Spinner = __webpack_require__(183);
+	
+	var _Spinner2 = _interopRequireDefault(_Spinner);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21851,10 +21859,10 @@
 	var GeneralInformation = function (_Component) {
 	    _inherits(GeneralInformation, _Component);
 	
-	    function GeneralInformation() {
+	    function GeneralInformation(props) {
 	        _classCallCheck(this, GeneralInformation);
 	
-	        return _possibleConstructorReturn(this, (GeneralInformation.__proto__ || Object.getPrototypeOf(GeneralInformation)).call(this));
+	        return _possibleConstructorReturn(this, (GeneralInformation.__proto__ || Object.getPrototypeOf(GeneralInformation)).call(this, props));
 	    }
 	
 	    _createClass(GeneralInformation, [{
@@ -21863,63 +21871,67 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(
-	                    'h3',
-	                    null,
-	                    'General information about the field number ' + this.props.idField
-	                ),
-	                _react2.default.createElement(
+	                this.props.idField == undefined ? _react2.default.createElement(_Spinner2.default, null) : _react2.default.createElement(
 	                    'div',
-	                    { className: 'row' },
+	                    null,
+	                    _react2.default.createElement(
+	                        'h3',
+	                        null,
+	                        'General information about the field number ' + _StaticDatabase2.default.fields[this.props.idField].name
+	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'col-sm-6' },
+	                        { className: 'row' },
 	                        _react2.default.createElement(
-	                            'table',
-	                            { className: 'table' },
+	                            'div',
+	                            { className: 'col-sm-6' },
 	                            _react2.default.createElement(
-	                                'tbody',
-	                                null,
+	                                'table',
+	                                { className: 'table' },
 	                                _react2.default.createElement(
-	                                    'tr',
+	                                    'tbody',
 	                                    null,
 	                                    _react2.default.createElement(
-	                                        'td',
-	                                        { className: 'titleTable' },
-	                                        'Location'
+	                                        'tr',
+	                                        null,
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            { className: 'titleTable' },
+	                                            'Location'
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            null,
+	                                            'Medell\xEDn, Colombia'
+	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
-	                                        'td',
+	                                        'tr',
 	                                        null,
-	                                        'Medell\xEDn, Colombia'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'tr',
-	                                    null,
-	                                    _react2.default.createElement(
-	                                        'td',
-	                                        { className: 'titleTable' },
-	                                        'Capacity'
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            { className: 'titleTable' },
+	                                            'Capacity'
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            null,
+	                                            '12 players'
+	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
-	                                        'td',
+	                                        'tr',
 	                                        null,
-	                                        '12 players'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'tr',
-	                                    null,
-	                                    _react2.default.createElement(
-	                                        'td',
-	                                        { className: 'titleTable' },
-	                                        'Field condition'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'td',
-	                                        null,
-	                                        'Good'
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            { className: 'titleTable' },
+	                                            'Field condition'
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'td',
+	                                            null,
+	                                            'Good'
+	                                        )
 	                                    )
 	                                )
 	                            )
@@ -22194,6 +22206,55 @@
 	        longitude: 141.044
 	    }]
 	};
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Spinner = function (_Component) {
+	    _inherits(Spinner, _Component);
+	
+	    function Spinner() {
+	        _classCallCheck(this, Spinner);
+	
+	        return _possibleConstructorReturn(this, (Spinner.__proto__ || Object.getPrototypeOf(Spinner)).call(this));
+	    }
+	
+	    _createClass(Spinner, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'h3',
+	                null,
+	                'Loading...'
+	            );
+	        }
+	    }]);
+	
+	    return Spinner;
+	}(_react.Component);
+	
+	exports.default = Spinner;
 
 /***/ }
 /******/ ]);
