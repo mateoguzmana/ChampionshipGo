@@ -21309,19 +21309,19 @@
 	    languages: {
 	        en: {
 	            title: "${name}",
-	            icon: "http://flaglane.com/download/american-flag/american-flag-large.png"
+	            icon: "../../assets/en_flag.png"
 	        },
 	        sp: {
 	            title: "${name}",
-	            icon: "http://static.donquijote.org/images/culture/spanish_flag2.jpg"
+	            icon: "../../assets/sp_flag.jpg"
 	        },
 	        pt: {
 	            title: "${name}",
-	            icon: "http://www.sciencekids.co.nz/images/pictures/flags680/Brazil.jpg"
+	            icon: "../../assets/pt_flag.jpg"
 	        },
 	        fr: {
 	            title: "${name}",
-	            icon: "http://www.worldatlas.com/webimage/flags/countrys/zzzflags/frlarge.gif"
+	            icon: "../../assets/fr_flag.gif"
 	        }
 	    }
 	};
@@ -21877,7 +21877,7 @@
 	                    _react2.default.createElement(
 	                        'h3',
 	                        null,
-	                        'General information about the field number ' + _StaticDatabase2.default.fields[this.props.idField].name
+	                        'General information about ' + _StaticDatabase2.default.fields[this.props.idField].name + ' field'
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
@@ -22211,7 +22211,7 @@
 /* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -22241,13 +22241,11 @@
 	    }
 	
 	    _createClass(Spinner, [{
-	        key: 'render',
+	        key: "render",
 	        value: function render() {
-	            return _react2.default.createElement(
-	                'h3',
-	                null,
-	                'Loading...'
-	            );
+	            return _react2.default.createElement("img", {
+	                src: "../../../assets/Spinner.gif"
+	            });
 	        }
 	    }]);
 	

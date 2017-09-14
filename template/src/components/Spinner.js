@@ -8,7 +8,9 @@ export default class Spinner extends Component {
 
     render() {
         return (
-            <h3>Loading...</h3>
+            <img
+                src={"../../../assets/Spinner.gif"}
+            />
         );
     }
 }

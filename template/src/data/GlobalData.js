@@ -4,19 +4,19 @@ export default GlobalData = {
     languages: {
         en: {
             title: "${name}",
-            icon: "http://flaglane.com/download/american-flag/american-flag-large.png"
+            icon: "../../assets/en_flag.png"
         },
         sp: {
             title: "${name}",
-            icon: "http://static.donquijote.org/images/culture/spanish_flag2.jpg"
+            icon: "../../assets/sp_flag.jpg"
         },
         pt: {
             title: "${name}",
-            icon: "http://www.sciencekids.co.nz/images/pictures/flags680/Brazil.jpg"
+            icon: "../../assets/pt_flag.jpg"
         },
         fr: {
             title: "${name}",
-            icon: "http://www.worldatlas.com/webimage/flags/countrys/zzzflags/frlarge.gif"
+            icon: "../../assets/fr_flag.gif"
         }
     }
 }

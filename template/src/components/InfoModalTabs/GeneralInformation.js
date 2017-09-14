@@ -14,12 +14,12 @@ export default class GeneralInformation extends Component {
         return (
             <div>
                 {
-                    this.props.idField==undefined
+                    this.props.idField == undefined
                         ?
-                        <Spinner/>
+                        <Spinner />
                         :
                         <div>
-                            <h3>{`General information about the field number ${StaticDatabase.fields[this.props.idField].name}`}</h3>
+                            <h3>{`General information about ${StaticDatabase.fields[this.props.idField].name} field`}</h3>
                             <div className="row">
                                 <div className="col-sm-6">
                                     <table className="table">
