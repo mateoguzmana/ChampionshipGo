@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "dependencies": {
     "lodash": "^4.17.4",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react-router-dom": "^4.2.2"
   },
   "author": {
     "name": "Mateo Guzmán",
