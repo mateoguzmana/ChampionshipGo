@@ -27,7 +27,7 @@ export default class InfoModal extends Component {
                                 </li>
                                 <li><a href="#2" data-toggle="tab">{Translations.infoModal.galleryTab.title[GlobalData.currentLanguage]}</a>
                                 </li>
-                                <li><a href="#3" data-toggle="tab">Schedule</a>
+                                <li><a href="#3" data-toggle="tab">{Translations.infoModal.scheduleTab.title[GlobalData.currentLanguage]}</a>
                                 </li>
                             </ul>
                         </div>

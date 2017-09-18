@@ -56,6 +56,14 @@ export default Translations = {
                 pt: "Galeria",
                 fr: "Galerie"
             }
+        },
+        scheduleTab: {
+            title: {
+                en: "Schedule",
+                sp: "Cronograma",
+                pt: "Cronograma",
+                fr: "Programme"
+            }
         }
     }
 }
