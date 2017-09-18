@@ -21199,6 +21199,15 @@
 	                { href: '#' },
 	                _Translations2.default.headerView.worldMapTitle[_GlobalData2.default.currentLanguage]
 	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { href: '#' },
+	                _Translations2.default.headerView.contributeTitle[_GlobalData2.default.currentLanguage]
+	              )
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -21246,6 +21255,12 @@
 	            sp: "¡Juega!",
 	            pt: "Combine!",
 	            fr: "Rencontre!"
+	        },
+	        contributeTitle: {
+	            en: "Contribute",
+	            sp: "Contribuir",
+	            pt: "Contribuir",
+	            fr: "Contribuer"
 	        },
 	        languages: {
 	            en: {

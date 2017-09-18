@@ -18,6 +18,7 @@ export default class Header extends Component {
           </div>
           <ul className="nav navbar-nav">
             <li className="active"><a href="#">{Translations.headerView.worldMapTitle[GlobalData.currentLanguage]}</a></li>
+            <li><a href="#">{Translations.headerView.contributeTitle[GlobalData.currentLanguage]}</a></li>
           </ul>
           <button className="btn btn-danger navbar-btn">{Translations.headerView.matchTitle[GlobalData.currentLanguage]}</button>
           <ul className="nav navbar-nav navbar-right">

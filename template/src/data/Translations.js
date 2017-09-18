@@ -13,6 +13,12 @@ export default Translations = {
             pt: "Combine!",
             fr: "Rencontre!"
         },
+        contributeTitle: {
+            en: "Contribute",
+            sp: "Contribuir",
+            pt: "Contribuir",
+            fr: "Contribuer"
+        },
         languages: {
             en: {
                 en: "English",
