@@ -63,11 +63,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	window.onload = function () {
-	  _reactDom2.default.render(_react2.default.createElement(
-	    _reactRouterDom.HashRouter,
-	    null,
-	    _react2.default.createElement(_ChampionshipGo2.default, null)
-	  ), document.querySelector('#container'));
+	    _reactDom2.default.render(_react2.default.createElement(
+	        _reactRouterDom.HashRouter,
+	        null,
+	        _react2.default.createElement(_ChampionshipGo2.default, null)
+	    ), document.querySelector('#container'));
 	};
 
 /***/ },
@@ -26526,7 +26526,7 @@
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -26556,12 +26556,53 @@
 	    }
 	
 	    _createClass(Contribute, [{
-	        key: 'render',
+	        key: "render",
 	        value: function render() {
 	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                'Contribute view'
+	                "div",
+	                { className: "row optionContributeRow" },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "col-sm-12" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "col-sm-6 optionContribute" },
+	                        "test"
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "col-sm-6 optionContribute" },
+	                        "test"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "col-sm-12" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "col-sm-6 optionContribute" },
+	                        "test"
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "col-sm-6 optionContribute" },
+	                        "test"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "col-sm-12" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "col-sm-6 optionContribute" },
+	                        "test"
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "col-sm-6 optionContribute" },
+	                        "test"
+	                    )
+	                )
 	            );
 	        }
 	    }]);
