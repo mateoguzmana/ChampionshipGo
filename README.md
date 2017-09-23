@@ -1,6 +1,6 @@
 # ChampionshipGo app
 
-ChampionshipGo application in React.
+ChampionshipGo application in React.js.
 
 ## Features
 
